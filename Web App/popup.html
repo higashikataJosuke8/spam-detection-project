@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/popup.css">
+    <title>Spam Detection</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <img src="images/logo.png">
+        <h1>Spam Detection</h1>
+    </div>
+    <div class="quote">
+        <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h5>
+    </div>
+    <div class="tabs">
+        <div class="btn-box">
+            <button id="btn1" onclick="openEmail()">EMAIL</button>
+            <button id="btn2" onclick="openSMS()">SMS</button>
+        </div>
+        <div id="details1" class="details">
+            <input id="subject" placeholder="Subject"><br>
+            <textarea cols="80" rows="6" placeholder="Content"></textarea>
+        </div>
+        <div id="details2" class="details">
+            <textarea cols="80" rows="6" placeholder="Content"></textarea>
+        </div>
+    </div>
+    <div class="next">
+		<a href="popup2.html">Proceed</a>
+	</div>
+    <script src="scripts/popup.js">
+    </script>
+</body>
+</html>

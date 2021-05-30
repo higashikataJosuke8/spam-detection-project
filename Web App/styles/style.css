@@ -1,0 +1,393 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+/*navigation*/
+nav{
+	background: #fff;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 12;
+}
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 50px;
+	margin: 0 5px;
+}
+nav ul li a{
+	color: #000000;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 10px;
+	text-transform: uppercase;
+}
+a.active, a:hover{
+	background: #ce3232;
+	transition: 0.5s;
+}
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: left;
+	line-height: 60px;
+	margin-left: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+/*logo*/
+.logo{
+    height: 180px;
+	padding: 55px 0 0 0;
+    width: 100%;
+    background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo h1{
+	font-size: 250%;
+}
+.quote{
+    height: 10px;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 0;
+}
+.logo img{
+    width: 10%;
+}
+/*Email or SMS*/
+.tabs{
+	width: 50%;
+	height: 350px;
+	margin: 10px auto;
+	overflow: hidden;
+	position: relative;
+}
+.btn-box{
+	display: flex;
+	border-bottom: 1px solid #ce3232;
+}
+.btn-box button{
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#btn1{
+	background: #ce3232;
+}
+.details{
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	position: absolute;
+	transform: translateX(115%);
+	padding: 1% 10%;
+}
+.details input{
+	width: 100%;
+	border: 1px solid #4a4a4a;
+	border-radius: 4px;
+	padding: 8px;
+	outline: none;
+	margin: 1% 0;
+	box-sizing: border-box;
+}
+.details input:focus{
+	border-color: #ce3232;
+	box-shadow: 0 0 5px 0 #ce3232;
+}
+.details textarea{
+	width: 100%;
+	border: 1px solid #4a4a4a;
+	border-radius: 4px;
+	padding: 8px;
+	outline: none;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+.details textarea:focus{
+	border-color: #ce3232;
+	box-shadow: 0 0 5px 0 #ce3232;
+}
+#details1 {
+	transform: translateX(0px);
+}
+.next{
+	width: 50%;
+	height: 100px;
+	margin: 10px auto;
+	overflow: hidden;
+	position: relative;
+}
+.next a{
+	margin-left: 80%;
+	width: 16%;
+	display: block;
+	font-size: 80%;
+	padding: 8px 5px;
+	border-style: none;
+	border-radius: 20px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #ce3232;
+	text-align: center;
+}
+/*result*/
+.result-cont {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}  
+.result-head {
+	margin: 30px;
+	text-align: center;
+}
+.panel-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}  
+.result-panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #b7b7b7;
+	height: 200px;
+	width: 55%;
+	border-radius: 10px;
+}  
+.result-panel p {
+	text-align: center;
+	font-size: 20px;
+}  
+.btn-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20%;
+	padding-bottom: 20px;
+}  
+.btn-cont button {
+	width: 50%;
+	height: 100%;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 18px;
+}
+.btn {
+	margin-top: 15px;
+	width: 500px;
+	height: 40px;
+}  
+#adv {
+	border: none;
+	background-color: transparent;
+	width: 150px;
+}  
+#scan {
+	background-color: #ce3232;
+	border-radius: 20px;
+	width: 30%;
+	float: right;
+}  
+#scan:hover {
+	background-color: gray;
+}  
+.btn button {
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 630;
+}  
+/*advance view*/
+.chart-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}  
+#piechart2 {
+	width: 900px;
+	height: 300px;
+}
+/*statistics*/
+.stats{
+	width: 70%;
+	margin: 10px auto;
+	position: relative;
+	padding: 10px 0;
+	align-items: center;
+	justify-content: center;
+}
+.Graph{
+	border-radius: 20px;
+	padding: 20px 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.chart{
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.chart img, .infoChart{
+	width: 50%;
+}
+.infoChart{
+	
+	text-align: center;
+}
+.infoChart h3, .infoChart p{
+	font-size: 90%;
+}
+/*footer*/
+footer{
+	background: #4a4a4a;
+	height: auto;
+	width: 100%;
+	padding-top: 30px;
+	color: #fff;
+}
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+.footer-content h4{
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: capitalize;
+	line-height: 3rem;
+}
+.footer-content p{
+	max-width: 500px;
+	margin: 10px auto;
+	line-height: 28px;
+	font-size: 14px;
+}
+.socials{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 3rem 0;
+}
+.socials li{
+	margin: 0 10px;
+}
+.socials a{
+	text-decoration: none;
+	color: #fff;
+}
+.socials a i{
+	font-size: 1.1rem;
+	transition: color .4s ease;
+}
+.socials a:hover i{
+	color: aqua;
+}
+/*responsive*/
+@media (max-width: 952px){
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+@media (max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+	nav ul{
+		position: fixed;
+		width: 70%;
+		height: 100vh;
+		background: #fff;
+		top: 50px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px; 
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	a:hover, a.active{
+		background: none;
+		color: #ce3232;
+	}
+	#check:checked ~ ul{
+		left: 0;
+		position: absolute;
+		z-index: 12;
+	}
+	.tabs{
+		width: 80%;
+	}
+	.next{
+		width: 80%;
+	}
+	.stats{
+		width: 100%;
+		padding: 20px;
+	}
+	.stats .chart{
+		width: 100%;
+	}
+	.stats .infoChart{
+		width: 100%;
+	}
+	.result-panel{
+		width: 75%;
+	}
+}
+@media (max-width: 667px){
+	.tabs{
+		width: 100%;
+	}
+	.logo h1{
+		font-size: 200%;
+	}
+	.next{
+		width: 100%;
+	}
+	.Graph{
+		display: block;
+	}
+	.Graph .chart{
+		width: 100%;
+	}
+}
+@media (max-width: 375px){
+	.logo img{
+		height: 50%;
+		width: auto;
+	}
+}
