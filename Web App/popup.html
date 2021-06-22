@@ -18,20 +18,20 @@
     </div>
     <div class="tabs">
         <div class="btn-box">
-            <button id="btn1" onclick="openEmail()">EMAIL</button>
-            <button id="btn2" onclick="openSMS()">SMS</button>
+            <button name="email-btn" id="btn1" onclick="openEmail()">EMAIL</button>
+            <button name="sms-btn" id="btn2" onclick="openSMS()">SMS</button>
         </div>
-        <div id="details1" class="details">
-            <input id="subject" placeholder="Subject"><br>
-            <textarea cols="80" rows="6" placeholder="Content"></textarea>
-        </div>
-        <div id="details2" class="details">
-            <textarea cols="80" rows="6" placeholder="Content"></textarea>
+        <div class="input-box">
+            <form method="GET" action="popup2.html">
+                <div id="details1" class="details">
+                    <textarea name="content" cols="100" rows="8" placeholder="Content" required></textarea>
+                </div>
+                <div class="proceed-btn">
+                    <input id="proceed" type="submit" value="Proceed">
+                </div>
+            </form>
         </div>
     </div>
-    <div class="next">
-		<a href="popup2.html">Proceed</a>
-	</div>
     <script src="scripts/popup.js">
     </script>
 </body>

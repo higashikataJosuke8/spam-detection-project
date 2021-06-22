@@ -1,22 +1,19 @@
 //tabs email or sms
-var details1 = document.getElementById("details1");
-var details2 = document.getElementById("details2");
 var btn1 = document.getElementById("btn1");
 var btn2 = document.getElementById("btn2");
-
 function openEmail(){
-    details1.style.transform= "translateX(0)";
-    details2.style.transform= "translateX(115%)";
-    btn1.style.background = "#ce3232";
-    btn2.style.background = "#ffffff";
+    btn1.style.background = "#ffd60a";
+    btn1.style.color = "#000";
+    btn2.style.background = "#000";
+    btn2.style.color = "#fff";
 }
 function openSMS(){
-    details1.style.transform= "translateX(115%)";
-    details2.style.transform= "translateX(0)";
-    btn1.style.background = "#ffffff";
-    btn2.style.background = "#ce3232";
+    btn1.style.background = "#000";
+    btn1.style.color = "#fff";
+    btn2.style.background = "#ffd60a";
+    btn2.style.color = "#000";
 }
-
+//spam or ham
 //pie chart
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -33,7 +30,9 @@ function drawChart() {
     ]);
 
     var options = {
-        title: 'Email Stats'
+        title: 'Email Stats', 
+        'backgroundColor': '#1196AF',
+        'color': 'white'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -64,7 +63,8 @@ function drawMultSeries() {
         },
         vAxis: {
           title: 'City'
-        }
+        }, 
+        'backgroundColor': '#1196AF'
       };
 
       var chart = new google.visualization.BarChart(document.getElementById('chart_divbar'));
@@ -102,7 +102,8 @@ function drawBasic() {
         },
         vAxis: {
           title: 'Victims'
-        }
+        }, 
+        'backgroundColor': '#1196AF'
       };
 
       var chart = new google.visualization.LineChart(document.getElementById('chart_divline'));
@@ -122,6 +123,7 @@ function drawChart2() {
 
   var options = {
     title: "Percentage",
+    'backgroundColor': '#14b3d0'
   };
 
   var chart = new google.visualization.PieChart(

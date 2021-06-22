@@ -7,16 +7,16 @@ btn1.addEventListener("click", openEmail);
 btn2.addEventListener("click", openSMS);
 
 function openEmail(){
-    details1.style.transform= "translateX(0)";
-    details2.style.transform= "translateX(100%)";
-    btn1.style.background = "#ce3232";
-    btn2.style.background = "#ffffff";
+  btn1.style.background = "#ffd60a";
+  btn1.style.color = "#000";
+  btn2.style.background = "#000";
+  btn2.style.color = "#fff";
 }
 function openSMS(){
-    details1.style.transform= "translateX(100%)";
-    details2.style.transform= "translateX(0)";
-    btn1.style.background = "#ffffff";
-    btn2.style.background = "#ce3232";
+  btn1.style.background = "#000";
+  btn1.style.color = "#fff";
+  btn2.style.background = "#ffd60a";
+  btn2.style.color = "#000";
 }
 
 google.charts.load('current', {'packages':['corechart']});
