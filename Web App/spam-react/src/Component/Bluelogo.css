@@ -1,0 +1,51 @@
+
+.color-blue{
+    background: #348ccc;
+    color: white;
+    height: 400px;
+	padding-top: 200px;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	width: 1348px;
+	font-size: 12px;
+}
+.color-blue .logo{
+    width: 100%;
+	max-width: 1348px;
+	margin: auto;
+}
+.color-blue .logo .about-logo h1{
+    font-size: 800%;
+	line-height: 100px;
+}
+.color-blue .logo .about-logo h5{
+	font-weight: normal;
+	font-size: 100%;
+	text-align: right;
+}
+
+
+@media (max-width: 1024px){
+	.color-blue{
+		width: 100%;
+	}
+	.color-blue .logo{
+		width: 80%;
+	}
+	.color-blue .logo .about-logo h1{
+		font-size: 6.1em;
+	}
+}
+
+
+@media (max-width: 667px) {
+	.color-blue .logo .about-logo h1{
+		font-size: 3em;
+		padding: 0;
+		line-height: 30px;
+	}
+	.color-blue .logo .about-logo h5{
+		font-size: 0.8em;
+	}
+}

@@ -1,0 +1,17 @@
+
+.sub {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .sub {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+}

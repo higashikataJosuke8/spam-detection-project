@@ -1,0 +1,16 @@
+
+
+.dropdown {
+  font-family: "Poppins", sans-serif;
+  color: #348ccc;
+  font-weight: 600;
+  /* margin: 50px; */
+  display: flex;
+  justify-content: center;
+  /* margin: 50px 0; */
+}
+
+.dd {
+  width: 300px;
+  margin: 0 65px;
+}

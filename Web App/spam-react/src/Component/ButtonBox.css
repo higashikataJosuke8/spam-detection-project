@@ -1,0 +1,47 @@
+.email.active, .sms.active{
+    background-color: #348ccc;
+    color: #fff;
+}
+.email.inactive , .sms.inactive{
+    background-color: #b7b7b7;
+    color: black;
+}
+
+.btn-box{
+	display: flex;
+	background: linear-gradient(to bottom,  #eee 0%, #eee 50%, #348ccc 60%);
+	border-radius: 40px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+.sms , .email{
+	width: 50%;
+	padding: 3px 0;
+}
+.btn-box input[type="radio"]{
+	display: none;
+}
+.btn-box label{
+	width: 100%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 42%;
+	font-size: 15px;
+	font-weight: bold;
+	transition-duration: 0.5s;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.btn-box .email{
+	border-radius: 15px 15px 15px 0;
+	transition-duration: 0.5s;
+}
+.btn-box .sms{
+	border-radius: 15px 15px 0 15px;
+	transition-duration: 0.5s;
+}
