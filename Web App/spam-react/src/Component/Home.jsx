@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Inputs from './Inputs';
 import Stats from './Stats';
 
-const Home = () => {
+const Home = (props) => {
     const [button, setButton] = useState('inactive');
     const [popup, setPopup] = useState('active');
     const [agree, setAgree] = useState(true);
@@ -15,6 +15,12 @@ const Home = () => {
         setAgree(true)
       }
     };
+    const changeType = (e) => {
+      props.changeType(e);
+    }
+    const changeContent = (e) => {
+      props.changeContent(e);
+    }
     const closePopup = () => {
       setPopup('')
     };
@@ -30,7 +36,7 @@ const Home = () => {
             <br/>
             <input type="submit" value="Confirm" onClick={closePopup} id="agreeBtn" disabled={agree} className={button}/>
             </div>
-            <Inputs class={'inputs '+popup} />
+            <Inputs class={'inputs '+popup} type = {props.type} content={props.content} changeType={changeType} changeContent={changeContent}/>
             <Stats class={'spam '+popup} />
         </>
     )

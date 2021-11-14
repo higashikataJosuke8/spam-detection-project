@@ -6,13 +6,23 @@ function CardsPage() {
   return (
     <div className="cont">
       <div className="card-container">
-        <Card front="C1 Front" back="C1 Back" />
+        <div className="grid">
+          <div className="cards">
+            <Card front="C1 Front" back="C1 Back" />
+          </div>
+          <div className="cards">
+            <Card front="C2 Front" back="C2 Back" />
+          </div>
+        </div>
+        <div className="grid">
+          <div className="cards">
+            <Card front="C3 Front" back="C3 Back" />
+          </div>
 
-        <Card front="C2 Front" back="C2 Back" />
-
-        <Card front="C3 Front" back="C3 Back" />
-
-        <Card front="C4 Front" back="C4 Back" />
+          <div className="cards">
+            <Card front="C4 Front" back="C4 Back" />
+          </div>
+        </div>
       </div>
     </div>
   );

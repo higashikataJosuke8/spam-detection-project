@@ -1,17 +1,56 @@
-
 .sub {
   display: flex;
   flex-direction: row;
-  margin: 50px 0;
+  margin: 50px auto;
   justify-content: center;
   position: relative;
+  width: 100%;
+  max-width: 1348px;
 }
 
-@media (max-width: 480px) {
+.area-graph {
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 952px) {
+  /* #car1,
+  #car2 {
+    margin: 0 20px;
+  } */
+
+  .sub-sub {
+    order: -1;
+    margin: 0 auto;
+  }
+
+  .area-graph {
+    bottom: -100%;
+    position: absolute;
+  }
+
+  .sub {
+    margin: 40px auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 667px) {
   .sub {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 0;
+  }
+
+  .sub-sub {
+    padding: 0;
+    align-items: center;
+    order: 0;
+  }
+
+  .area-graph {
+    align-self: center;
+    bottom: -40%;
   }
 }

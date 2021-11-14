@@ -47,10 +47,30 @@
   border-radius: 20px;
   width: 43vw;
   height: 270px;
-  margin: -7px 60px;
+  margin: 0 60px;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
+  .btn-container-analytics {
+    margin: 0 20px;
+    width: 38vw;
+  }
+}
+
+@media only screen and (max-width: 952px) {
+  .btn-container-analytics {
+    margin: 0 10px;
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-container-analytics {
+    margin: 0 10px;
+    width: 85vw;
+  }
+}
+@media only screen and (max-width: 667px) {
   .btn-container-analytics {
     margin: 0;
   }

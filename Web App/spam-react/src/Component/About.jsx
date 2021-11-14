@@ -1,12 +1,12 @@
 import React from 'react';
-import Bluelogo from './Bluelogo';
+import Logo from './Logo';
 import Objective from './Objective';
 import Developers from './Developers';
 
 const About = () => {
     return (
         <div>
-            <Bluelogo />
+            <Logo />
             <Objective />
             <Developers />
         </div>

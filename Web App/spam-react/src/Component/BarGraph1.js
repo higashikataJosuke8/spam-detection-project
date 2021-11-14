@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./BarGraph.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
 
@@ -34,14 +34,37 @@ const data = [
 ];
 
 export default function BarGraph1() {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    updateDimensions();
+
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWidth(width);
+  };
   return (
     <div className="graph-cont">
       <div className="graph">
         <BarChart
-          width={550}
+          width={
+            width >= 1348 ? 550 : width >= 952 ? 400 : width >= 720 ? 650 : 320
+          }
           height={175}
           data={data}
-          barCategoryGap={30}
+          barCategoryGap={
+            width >= 1348
+              ? 30
+              : width >= 952
+              ? 30
+              : width >= 940
+              ? 25
+              : width >= 720
+              ? 30
+              : 20
+          }
           margin={{
             top: 20,
             right: 30,

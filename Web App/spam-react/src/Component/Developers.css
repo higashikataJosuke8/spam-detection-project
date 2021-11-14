@@ -195,9 +195,6 @@ input[type="checkbox"]{
 	}
 }
 @media (max-width: 1024px){
-	nav ul{
-		width: 40%;
-	}
 	.Team .devs{
 		width: 80%;
 	}
@@ -245,50 +242,6 @@ input[type="checkbox"]{
 	}
 }
 
-@media (max-width: 952px){
-	nav ul li a{
-		font-size: 16px;
-	}
-	.checkbtn{
-		display: block;
-	}
-	.logo img{
-		width: 20%;
-	}
-	nav ul{
-		position: fixed;
-		width: 70%;
-		height: 100vh;
-		top: 50px;
-		left: -100%;
-		text-align: center;
-		transition: all 0.5s;
-	}
-	nav ul li{
-		display: block;
-		margin: 50px auto;
-		line-height: 30px; 
-		width: 100%;
-		padding: 10px;
-	}
-	nav ul li a{
-		font-size: 20px;
-		padding: 0 20%;
-	}
-	nav .nav-logo{
-		margin: auto;
-	}
-	#check:checked ~ ul{
-		left: 0;
-		position: absolute;
-		z-index: 12;
-	}
-	#check:checked ~ .nav-overlay{
-		visibility: visible;
-		opacity: 1;
-	}
-	
-}
 @media (max-width: 667px) {
 	.color-blue .logo .logo-name h1{
 		font-size: 3em;

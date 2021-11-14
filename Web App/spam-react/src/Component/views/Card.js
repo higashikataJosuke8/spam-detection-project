@@ -10,7 +10,11 @@ function Card(props) {
   };
 
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+    <ReactCardFlip
+    isFlipped={isFlipped}
+    flipDirection="horizontal"
+    containerClassName="card-cont"
+    containerStyle={cardStyle} >
       <div className="card front-BG" onClick={clickHandle}>
         <div onClick={clickHandle} className="card front">
           {props.front}
@@ -25,4 +29,8 @@ function Card(props) {
   );
 }
 
+const cardStyle = {
+  width: '100%',
+  padding: '10px 20px',
+}
 export default Card;

@@ -18,7 +18,7 @@ export default class Carousel1 extends Component {
       className: "slides",
     };
     return (
-      <div className="body">
+      <div className="body" id="car1">
         <h2> Email Notifications</h2>
         <Slider className="slider" {...settings}>
           <div className="div-one">

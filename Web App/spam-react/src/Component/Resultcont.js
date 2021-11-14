@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Chart from 'react-google-charts'
 
-const Resultcont = () => {
+const Resultcont = (props) => {
     var hamPercent = 50;
     const [advance, setAdvance] = useState({"spamPercent":0, "result": '', 'type': '', 'content': ''});
     useEffect(() => {
-        const params = (new URL(document.location)).searchParams;
-        const content = params.get('content');
-        const type = params.get('type');
-        console.log(type, content)
-        fetch("/result", {'method': 'POST', 
+        const content = props.content;
+        const type = props.type;
+        console.log(type, content);
+        fetch("/results", {'method': 'POST', 
         headers: {
             'Content-type': 'application/json'
         },
@@ -20,7 +19,7 @@ const Resultcont = () => {
           }
         }).then(data => setAdvance(data))
         .catch(error => console.log(error))
-      }, []);
+      }, [props]);
       console.log(advance);
     var spamPercent = advance.spamPercent;
     

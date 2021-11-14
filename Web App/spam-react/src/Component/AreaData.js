@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Dropdown.css";
 import Select from "react-select";
 
@@ -62,12 +62,32 @@ function AreaData() {
   //const [result2, dd2Value] = useState(options2.label);
   const dd1Handler = (e) => {
     //dd1Value(e.value);
-    setChosen1((e.value === "opt11") ? option1: (e.value === "opt12") ? option2: (e.value === "opt13") ? option3: (e.value === "opt14") ? option4: option5);
+    setChosen1(
+      e.value === "opt11"
+        ? option1
+        : e.value === "opt12"
+        ? option2
+        : e.value === "opt13"
+        ? option3
+        : e.value === "opt14"
+        ? option4
+        : option5
+    );
     //console.log(chosen1);
   };
   const dd2Handler = (e) => {
     //dd2Value(e.value);
-    setChosen2((e.value === "opt21") ? option1: (e.value === "opt22") ? option2: (e.value === "opt23") ? option3: (e.value === "opt24") ? option4: option5);
+    setChosen2(
+      e.value === "opt21"
+        ? option1
+        : e.value === "opt22"
+        ? option2
+        : e.value === "opt23"
+        ? option3
+        : e.value === "opt24"
+        ? option4
+        : option5
+    );
     //console.log(chosen2);
   };
 
@@ -83,6 +103,17 @@ function AreaData() {
     { name: "Page F", uv: chosen1[5], pv: chosen2[5] },
     { name: "Page G", uv: chosen1[6], pv: chosen2[6] },
   ];
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    updateDimensions();
+
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWidth(width);
+  };
   return (
     <div>
       {/* start of dropdown */}
@@ -123,23 +154,47 @@ function AreaData() {
       <div className="graph-cont">
         <div className="linegraph">
           <AreaChart
-            width={700}
-            height={400}
+            width={
+              width >= 1348
+                ? 700
+                : width >= 940
+                ? 550
+                : width >= 720
+                ? 500
+                : 350
+            }
+            height={
+              width >= 1348
+                ? 400
+                : width >= 940
+                ? 350
+                : width >= 720
+                ? 200
+                : 220
+            }
             data={data}
             margin={{
               top: 10,
-              right: 30,
+              right: 50,
               left: 0,
               bottom: 0,
             }}
           >
             <XAxis
-              fontSize={12}
+              fontSize={
+                width >= 1348 ? 12 : width >= 940 ? 10 : width >= 720 ? 9 : 8
+              }
               dataKey="name"
               axisLine={false}
               tickLine={false}
             />
-            <YAxis fontSize={12} axisLine={false} tickLine={false} />
+            <YAxis
+              fontSize={
+                width >= 1348 ? 12 : width >= 940 ? 10 : width >= 720 ? 9 : 8
+              }
+              axisLine={false}
+              tickLine={false}
+            />
             <Tooltip
               wrapperStyle={{
                 width: 85,

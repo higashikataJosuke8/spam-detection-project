@@ -1,41 +1,34 @@
 import React from "react";
 import "./Analytics.css";
-import CardsPage from "./views/CardsPage";
-import Title from "./Title";
-// import Dropdown from "./components/Dropdown";
+import Logo from "./Logo";
 import Charts from "./Charts";
 import Carousel1 from "./Carousel1";
 import Carousel2 from "./Carousel2";
-// import LineGraph from "./LineGraph";
-
+import CardsPage from "./views/CardsPage";
 import AreaData from "./AreaData";
-
-
 const Analytics = () => {
-    return (
-        <div className="main">
-            <Title />
-            <CardsPage />
-            <div className="sub">
-                <div>
-                <Carousel1 />
-                </div>
-                <div>
-                <br />
-                <br />
-                <Charts />
-                </div>
-                <div>
-                <Carousel2 />
-                </div>
-            </div>
-
-            {/* <Dropdown /> */}
-            {/* <LineGraph /> */}
-
-            <AreaData />
+  return (
+    <div className="main">
+      <Logo />
+      <CardsPage />
+      <div className="sub">
+        <div className="sub-sub" id="car1">
+          <Carousel1 />
         </div>
-    )
-}
+        <div className="area-graph">
+          <Charts />
+        </div>
+        <div className="sub-sub" id="car2">
+          <Carousel2 />
+        </div>
+      </div>
 
-export default Analytics
+      {/* <Dropdown /> */}
+      {/* <LineGraph /> */}
+
+      <AreaData />
+    </div>
+  );
+};
+
+export default Analytics;

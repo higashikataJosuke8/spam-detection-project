@@ -32,7 +32,7 @@ function Charts() {
   const Display = () => {
     if (active.chart1 && !active.chart2) {
       return (
-        <div>
+        <div className='bargraph-cont'>
           <BarGraph1 />
         </div>
       );
