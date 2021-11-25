@@ -9,11 +9,11 @@ const StatGraphs = () => {
             <div className="Graph" id="chart1">
               <div className="infoChart origin" style={{order: 1}}>
                 <h3>Origin of Spam</h3>
-                <p>Internet junk mail was the name before it was called spam. It was then called spam 
+                <p><b>Internet junk mail</b> was the name before it was called spam. It was then called spam 
                 in 1993 when USENET administrator Richard Depew was responding to a discussion group but
                  he accidentally posted 200 duplicate responses to the board. The first spam activity 
-                 was done in 1994 by the infamous duo of Cantor and Siegel. They posted and advertisement 
-                 called “Green Card Lottery”. The message was simultaneously distributed to 6,000 newsgroups. 
+                 was done in 1994 by the infamous duo of Cantor and Siegel. They posted an advertisement 
+                 called “Green Card Lottery” which simultaneously distributed to 6,000 newsgroups. 
                  They continued the scheme for a while and made a huge amount of money but it made them 
                  the most despisable individuals on the entire network that time.</p>
               </div>
@@ -21,35 +21,33 @@ const StatGraphs = () => {
             <div className="Graph" id="chart1">
               <div className="infoChart origin" style={{order: 1}}>
                 <h3>How to tell if an email is spam?</h3>
-                <p>So, you’re new to email stuff and afraid that you accidentally responded to a spam email
-                 and you don’t want to use or don’t know how to use spam detection services like ours and 
-                 extensions that blocks/filter spams, here are some tips on how to tell if an email is spam or not.<br/>
+                <p>Here are some tips on how to tell if a message is spam or not.<br/>
                  <ul>
                   <li>
-                    &nbsp;<b> •	Look at the sender’s email address</b> -	Many spam emails will disguise like a normal
-                   email you typically received. One easy way to know if it’s spam is to 
-                   check the email address. A legitimate business email shouldn’t come from a free
-                    email service like Yahoo, Hotmail, or Gmail.
+                    &nbsp;<b> •	Sender’s email address</b> -	Many spam emails will disguise like a normal
+                  email you typically received. One easy way to know if it’s spam is to 
+                  check the email address. A legitimate business email shouldn’t come from a free
+                  email service like Yahoo, Hotmail, or Gmail.
                   </li>
                   <li>
-                    &nbsp;<b> •	Look at the greeting</b> - If it Is from a legitimate company, they will 
+                    &nbsp;<b> •	Sender's greeting</b> - If it Is from a legitimate company, they will 
                     address you with your first name because they will have your personal details. Spam 
                     emails will likely begin with a ‘valued customer’, or even just a ‘good morning’
                   </li>
                   <li>
-                    &nbsp;<b> •	Look at the information the sender is requesting</b> -	If the email you 
+                    &nbsp;<b> •	Sender's information request</b> -	If the email you 
                     received ask for your personal information like for example your bank account, 
                     it is a spam. Personal information is only meant to be given in secured places not 
                     in emails where everyone can get their hands on it.
                   </li>
                   <li>
-                    &nbsp;<b> •	Look at the contents</b> -	Most companies will tell you what to do 
+                    &nbsp;<b> •	Contents</b> -	Most companies will tell you what to do 
                     through emails but most likely will not direct you to where to do it with a link. 
                     Also, check for grammatical errors and spelling errors because it is a good sign 
                     that it’s a spam.
                   </li>
                   <li>
-                    &nbsp;<b> •	Look at the images</b> -	Sometimes there are images attached to emails. 
+                    &nbsp;<b> •	Images</b> -	Sometimes there are images attached to emails. 
                     Spam emails used poor quality or low resolution images which is a sign. If a company 
                     logo is used, check if it’s the right one or just a knock off.
                   </li>
@@ -61,7 +59,7 @@ const StatGraphs = () => {
               <div className="chart icon" style={{order: 1}}>
                 <i className="fa fa-exclamation-triangle fa-5x" id="imageEmail" style={{fontSize: "100px"}}></i>
               </div>
-              <div className="infoChart" style={{order: 2}}>
+              <div className="infoChart icon" style={{order: 2}}>
                 <h3>What is Spam?</h3>
                 <p>Spam is not just a canned meat that everyone loves. Spam on the internet means unsolicited email. 
                 These are emails that people received which they didn’t asked for. Spam emails are used mostly for 
@@ -70,9 +68,9 @@ const StatGraphs = () => {
             </div>
             <div className="Graph">
               <div className="chart icon" style={{order: 2}}>
-                <i className="fa fa-check fa-5x" id="imageEmail" style={{fontSize: "100px"}}></i>
+                <i className="fa fa-list-ul fa-4x" id="imageEmail" style={{fontSize: "100px"}}></i>
               </div>
-              <div className="infoChart" style={{order: 1}}>
+              <div className="infoChart icon" style={{order: 1}}>
                 <h3>Famous spam terms to avoid:</h3>
                 <p>
                   <ul>
@@ -91,7 +89,7 @@ const StatGraphs = () => {
               </div>
             </div>
             <div className="Graph">
-              <div className="chart" style={{order: 1}}>
+              <div className="chart place-graph" style={{order: 1}}>
                 <div id="piechart" className="reps">
                   <Chart 
                     chartType = 'PieChart'
@@ -126,7 +124,7 @@ const StatGraphs = () => {
               </div>
             </div>
             <div className="Graph">
-              <div className="chart" style={{order: 2}}>
+              <div className="chart place-graph" style={{order: 2}}>
                 <div id="chart_divbar" className="reps">
                   <Chart 
                     data = {[
@@ -162,7 +160,7 @@ const StatGraphs = () => {
               </div>
             </div>
             <div className="Graph">
-              <div className="chart" style={{order: 1}}>
+              <div className="chart place-graph" style={{order: 1}}>
                 <div id="chart_divline" className="reps">
                   <Chart 
                     data = {[[

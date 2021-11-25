@@ -1,5 +1,4 @@
 import React from 'react'
-import Devpic from './default_pic.jpg'
 
 const Dev = (props) => {
     return (
@@ -9,7 +8,7 @@ const Dev = (props) => {
                 <div className="blue-bg" id="blue-bg">
                     <h1 className="username">{props.user}</h1>
                 </div>
-                <img src={Devpic} alt="Labay" className="picture" />
+                <img src={props.imgSrc} alt="Labay" className="picture" />
                 <h3 className="name">{props.dev}</h3>
                 <div className="addtl-details">
                     <h5 className="role">{props.role}</h5>
