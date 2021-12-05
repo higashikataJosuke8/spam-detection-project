@@ -1,13 +1,13 @@
 from SpamDetect import app
 from SpamDetect import mysql
-
+from model.rnn_model import RNNModel
 
 def getEmailResult(content):
-    if(len(content) < 50):
-        result='Ham'
-    else:
-        result='Spam'
+        
+    model = RNNModel('model/rnn-mail')
 
+    result = model.get_prediction(content)
+    
     spamPercent = len(content)
     
     cursor = mysql.connection.cursor()
@@ -18,10 +18,10 @@ def getEmailResult(content):
 
 
 def getSMSResult(content):
-    if(len(content) < 5):
-        result='Ham'
-    else:
-        result='Spam'
+    
+    model = RNNModel('model/rnn-sms')
+
+    result = model.get_prediction(content)
 
     spamPercent = len(content)
     
