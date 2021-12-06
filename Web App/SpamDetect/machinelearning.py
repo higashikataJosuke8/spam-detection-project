@@ -9,11 +9,14 @@ def getEmailResult(content):
     result = model.get_prediction(content)
     
     spamPercent = len(content)
-    
+    print(f'Content: {content}')
+    print(f'Percent: {spamPercent}')
+    print(f'Result: {result}')
     cursor = mysql.connection.cursor()
     cursor.execute(''' INSERT INTO resultxpam (type, content, result, spampercent) VALUES(%s,%s,%s,%s)''',('Email',content, result, spamPercent))
     mysql.connection.commit()
     cursor.close()
+
     return {'type':'Email', 'content': content, 'spamPercent': spamPercent, 'result' : result}
 
 
@@ -24,10 +27,13 @@ def getSMSResult(content):
     result = model.get_prediction(content)
 
     spamPercent = len(content)
-    
+    print(f'Content: {content}')
+    print(f'Percent: {spamPercent}')
+    print(f'Result: {result}')
     cursor = mysql.connection.cursor()
     cursor.execute(''' INSERT INTO resultxpam (type, content, result, spampercent) VALUES(%s,%s,%s,%s)''',('SMS',content, result, spamPercent))
     mysql.connection.commit()
     cursor.close()
+
     return {'type':'SMS', 'content': content, 'spamPercent': spamPercent, 'result' : result}
 
