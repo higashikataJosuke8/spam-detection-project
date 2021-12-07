@@ -33,7 +33,7 @@ class RNNModel:
         prediction.append(pred[0])
 
         if pred[0] > 0.5:
-            prediction.append('spam')
+            prediction.append('Spam')
         else:
-            prediction.append('ham')
+            prediction.append('Ham')
         return prediction
