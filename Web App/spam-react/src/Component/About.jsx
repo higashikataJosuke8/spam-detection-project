@@ -5,7 +5,7 @@ import Developers from './Developers';
 
 const About = () => {
     return (
-        <div>
+        <div className='main'>
             <Logo />
             <Objective />
             <Developers />

@@ -47,7 +47,7 @@ const ContactContent = () => {
 
                 <div className ="form-group">
                     <label htmlFor="email">Email<span>*</span></label>
-                    <input type="text" className="form-control" id="email" name="email" />
+                    <input type="text" className="form-control" id="email" name="email" required/>
                 </div>
                 
                 </div>
@@ -57,7 +57,7 @@ const ContactContent = () => {
                 
                 <div className="form-group">
                     <label htmlFor="message">Message</label>
-                    <textarea name="message" className="form-control" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" className="form-control" id="message" cols="30" rows="10" required></textarea>
                 </div>
 
                 <button id="submit-contact" type="submit" value="Submit" onSubmit={handleSubmit}>Submit</button>

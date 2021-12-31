@@ -22,6 +22,7 @@ const Resultcont = (props) => {
       }, [props]);
       console.log(advance);
     var spamPercent = advance.spamPercent;
+    hamPercent = 100-spamPercent;
     
     const [show, setShow] = useState('');
     const [graph, setGraph] = useState('');
@@ -34,6 +35,7 @@ const Resultcont = (props) => {
 		<div className="results-cont">
             <div className="result-head">
                 <h2>Results</h2>
+                <h4>{advance.type}</h4>
             </div>
             <div className="panel-cont">
                 <div className={(advance.result === 'Spam') ? 'result-panel spam' : 'result-panel ham'} id="spamHam">

@@ -8,6 +8,11 @@
   max-width: 1348px;
 }
 
+.main{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .area-graph {
   align-self: flex-end;
 }
