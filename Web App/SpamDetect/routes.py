@@ -4,17 +4,15 @@ from flask import render_template, request, jsonify
 from SpamDetect.machinelearning import getEmailResult, getSMSResult
 #from flask_cors import CORS, crossorigin
 
-@app.route('/')
-#@crossorigin()
-def serve():
+@app.errorhandler(404)
+def not_found(e):
     return send_from_directory(app.static_folder, 'index.html')
 
-
-@app.route('/home')
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
 #@crossorigin()
-def home_page():
-    return {'texting': 'Hello From Flask and Heroku'}
-
+def catch_all(path):
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 @app.route('/results', methods = ['POST'])

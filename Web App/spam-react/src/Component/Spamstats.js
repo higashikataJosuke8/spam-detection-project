@@ -4,6 +4,7 @@ const Spamstats = () => {
     return (
         <>
            <div className="topSpam">
+               <div className='topContent'>
                 <div className="info">
                     <h2 className="numbers">22.43 billion</h2>
                     <h4>legitimate mails sent per day </h4>
@@ -20,6 +21,8 @@ const Spamstats = () => {
                     <h2 className="numbers">122.3 billion</h2>
                     <h4> spam mails are sent per day</h4>
                 </div>
+               </div>
+                <p className='source'>Source: <a href='https://dataprot.net/statistics/spam-statistics/'>DataProt</a></p>
             </div>
             <div className="bottomSpam">
                 <div className="emailStats">
@@ -31,6 +34,7 @@ const Spamstats = () => {
                             <li><i className="fa fa-yahoo"></i><h4> 220 million Yahoo! accounts</h4></li>
                             <li><i className="fa fa-apple"></i><h4> 850 million iCloud accounts</h4></li>
                         </ul>
+                    <p className='source' id='statsource'>Source: <a href='https://dataprot.net/statistics/spam-statistics/'>DataProt</a></p>
                     </div>
                 </div>
                 <div className="smsStats">
@@ -42,6 +46,7 @@ const Spamstats = () => {
                             <li><i className="fa fa-bitcoin"></i><h4>26.5% are financial matters</h4></li>
                             <li><i className="fa fa-user-circle"></i><h4>2.5% are fraud accounts</h4></li>
                         </ul>
+                    <p className='source' id='statsource'>Source: <a href='https://dataprot.net/statistics/spam-statistics/'>DataProt</a></p>
                     </div>
                 </div>
             </div> 

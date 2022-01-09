@@ -326,7 +326,6 @@ body{
 }
 .topSpam{
 	width: 80%;
-	display: flex;
 	height: 150px;
 	margin: 10px auto;
 	margin-bottom: 20px;
@@ -336,11 +335,17 @@ body{
 	color: var(--primary);
 	box-shadow: 10px 10px 40px rgba(52, 140, 204, 0.2);
 }
-.topSpam .info{
+.topSpam .topContent{
+	display: flex;
+}
+.topSpam .topContent .info{
 	width: 25%;
 	margin: auto;
 	text-align: center;
 	display: flex;
+}
+#statsource{
+	margin-right: 5%;
 }
 .topSpam .info h2{
 	width: 40%;
@@ -407,6 +412,15 @@ body{
 .bottomSpam h2{
 	color: var(--primary);
 }
+.source{
+	color: #919191;
+	font-size: 12px;
+	float: right;
+}
+.source a{
+	color: #919191;
+	outline: none;
+}
 
 /*result*/
 .result-cont {
@@ -419,6 +433,16 @@ body{
 .result-head {
 	margin: 30px;
 	text-align: center;
+}
+.result-head .result-desc{
+	display: flex;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+}
+.result-head .result-desc img{
+	width: 5%;
+	height: 5%;
 }
 .panel-cont {
 	display: flex;
@@ -445,16 +469,14 @@ body{
 #spamHam.ham{
 	border: 2px solid #43da86;
 }
-#result-type{
-	position: absolute;
-	top: -0.8rem;
-	left: 1rem;
-	background: white;
-	padding: 0 3px;
-	font-size: 80%;
+.result-spam{
+	color: #f2405d;
+}
+.result-ham{
+	color: #43da86;
 }
 #result-content{
-	font-size: 70%;
+	font-size: 100%;
 	white-space: pre-wrap;
 	text-align: left;
 }
@@ -472,9 +494,10 @@ body{
 	height: auto;
 }
 .btn-cont button {
+	display: block;
 	width: 30%;
 	height: 100%;
-	float: left;
+	margin: auto;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -496,13 +519,13 @@ body{
 	border: none;
 	background-color: transparent;
 	width: 40%;
+	margin-top: 20px;
 }  
 #scan {
 	background: var(--primary);
 	color: var(--white);
 	border-radius: 20px;
-	width: 40%;
-	float: right;
+	width: 60%;
 }  
 #adv:hover{
 	color: var(--primary);
@@ -691,9 +714,13 @@ footer{
 	.topSpam{
 		display: block;
 		height: auto;
+		padding-bottom: 25px;
 		margin-top: 10px;
 	}
-	.topSpam .info{
+	.topSpam .topContent{
+		display: block;
+	}
+	.topSpam .topContent .info{
 		width: 100%;
 		display: flex;
 		text-align: center;
@@ -766,6 +793,9 @@ footer{
 	.info h4{
 		font-size: 100%;
 	}
+	.result-panel{
+		width: 70%;
+	}
 	.btn-cont button{
 		width: 50%;
 	}
@@ -819,5 +849,12 @@ footer{
 	}
 	#confirmation{
 		width: 80%;
+	}
+	.result-head .result-desc img{
+		width: 15%;
+		height: 15%;
+	}
+	#scan, #adv{
+		width: 90%;
 	}
 }

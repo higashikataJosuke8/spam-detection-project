@@ -1,7 +1,7 @@
 {
   "name": "spam-react",
   "version": "0.1.0",
-  "proxy": "https://thawing-dawn-77461.herokuapp.com/",
+  "proxy": "https://detekt-app.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",

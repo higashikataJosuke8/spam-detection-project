@@ -54,7 +54,7 @@ const Inputs = (props) => {
                             <h5>Are you sure you want to submit the content of your message?</h5>
                             <div className="confirm-cont">
                                 <div className="confirm cancel" onClick={justClose}>Cancel</div>
-                                <ConditionalLink to="/result" className='continue-cont' condition={empty}><input className="confirm continue" type="submit" value="Continue" onClick={closeConfirm} /></ConditionalLink>
+                                <ConditionalLink to="/result" className='continue-cont' condition={!empty}><input className="confirm continue" type="submit" value="Continue" onClick={closeConfirm} /></ConditionalLink>
                             </div>
                         </div>
                     </form>

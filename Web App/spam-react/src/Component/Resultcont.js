@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Chart from 'react-google-charts'
+import loading from './loading.gif'
 
 const Resultcont = (props) => {
     var hamPercent = 50;
@@ -30,25 +31,40 @@ const Resultcont = (props) => {
         setShow((show==='') ? 'active': '');
         setGraph((graph==='') ? 'active': '');
     };
-
+    const Loading = () => {
+        return (
+            <>
+                <img src={loading} alt='loading' />
+            </>
+        )
+    }
+    const ResultIcon = (props) => {
+        return (
+            <>
+                <i className={(props.result==='Spam')?'fa fa-exclamation-circle fa-3x result-spam':'fa fa-check-circle fa-3x result-ham'}></i>
+            </>
+        )
+    }
     return (
 		<div className="results-cont">
             <div className="result-head">
                 <h2>Results</h2>
-                <h4>{advance.type}</h4>
+                <div className='result-desc'>
+                    {(advance.result==='')?<Loading></Loading>:<ResultIcon result={advance.result}></ResultIcon>}
+                    <h4>Your {advance.type} content is <b>{(advance.result==='')?"being processed...":advance.result}</b></h4>
+                </div>
             </div>
             <div className="panel-cont">
-                <div className={(advance.result === 'Spam') ? 'result-panel spam' : 'result-panel ham'} id="spamHam">
-                    <p id="result-type">{advance.result} {advance.type}</p>
+                <div className={(advance.result==='')?'':(advance.result === 'Spam') ? 'result-panel spam' : 'result-panel ham'} id="spamHam">
                     <p id="result-content">{advance.content}</p>
                 </div>
             </div>
             <div className="btn-cont" id="btns">
                 <div className="btn">
-                    <button id="adv" onClick={showAdvance}>
-                    Advance Results<i id="updown" className={"fa fa-chevron-down " + show}></i>
-                    </button>
                     <a href="/"><button id="scan">Scan again?</button></a>
+                    <button id="adv" onClick={showAdvance}>
+                    Advance Result<i id="updown" className={"fa fa-chevron-down " + show}></i>
+                    </button>
                 </div>
             </div>
             <div className="chart-cont" id="advResult">

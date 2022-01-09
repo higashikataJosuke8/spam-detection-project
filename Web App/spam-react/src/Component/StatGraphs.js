@@ -1,5 +1,4 @@
 import React from 'react'
-import Chart from 'react-google-charts'
 
 const StatGraphs = () => {
     return (
@@ -88,6 +87,7 @@ const StatGraphs = () => {
                 </p>
               </div>
             </div>
+            <p className='source' id='statsource'>Source: <a href='https://spamlaws.com/spam-origin.html'>SpamLaws</a></p>
           </div>
         </div>
     )
