@@ -40,13 +40,13 @@ const Developers = () => {
                     <Dev dev="Brian Christian Estiller" user='@briii' role='Data Scientist' quote='acta non verba' class={active === 'check5' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check5' imgSrc={defaultPic}/>
                     
                     <input type="checkbox" id="check6" name="coder" onClick={e => openDev(e)} />
-                    <Dev dev="Matthew Legaspi" user='@Coconut' role='Big Data Analyst' quote='Alea iacta est' class={active === 'check6' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check6' imgSrc={dev6}/>
+                    <Dev dev="Matthew Legaspi" user='@Coconut' role='Data Analyst' quote='Alea iacta est' class={active === 'check6' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check6' imgSrc={dev6}/>
                     
                     <input type="checkbox" id="check7" name="coder" onClick={e => openDev(e)} />
-                    <Dev dev="Dennise Pingoy" user='@Daze' role='Big Data Analyst' quote='As astra abossysque' class={active === 'check7' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check7' imgSrc={defaultPic}/>
+                    <Dev dev="Dennise Pingoy" user='@Daze' role='Data Analyst' quote='As astra abossysque' class={active === 'check7' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check7' imgSrc={defaultPic}/>
                     
                     <input type="checkbox" id="check8" name="coder" onClick={e => openDev(e)} />
-                    <Dev dev="Christian Marcial" user='@Sealed' role='Big Data Analyst' quote='Pax Optimuma rerum' class={active === 'check8' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check8' imgSrc={defaultPic}/>
+                    <Dev dev="Christian Marcial" user='@Sealed' role='Data Analyst' quote='Pax Optimuma rerum' class={active === 'check8' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check8' imgSrc={defaultPic}/>
                 </div>
             </div>
         </>

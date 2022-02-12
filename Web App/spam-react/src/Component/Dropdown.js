@@ -40,19 +40,17 @@ var r1, r2;
 
 function Dropdown() {
   const options1 = [
-    { value: "opt11", label: "Option 1" },
-    { value: "opt12", label: "Option 2" },
-    { value: "opt13", label: "Option 3" },
-    { value: "opt14", label: "Option 4" },
-    { value: "opt15", label: "Option 5" },
+    { value: "opt11", label: "Maybe" },
+    { value: "opt12", label: "Hacked" },
+    { value: "opt13", label: "Not Hacked" },
+    { value: "opt14", label: "Total" },
   ];
 
   const options2 = [
-    { value: "opt21", label: "Option 1" },
-    { value: "opt22", label: "Option 2" },
-    { value: "opt23", label: "Option 3" },
-    { value: "opt24", label: "Option 4" },
-    { value: "opt25", label: "Option 5" },
+    { value: "opt21", label: "Female" },
+    { value: "opt22", label: "Male" },
+    { value: "opt23", label: "Prefer not to say" },
+    { value: "opt24", label: "Total" },
   ];
 
   const [result1, dd1Value] = useState(options1.label);

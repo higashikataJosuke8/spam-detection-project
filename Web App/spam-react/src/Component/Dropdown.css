@@ -11,23 +11,24 @@
 }
 
 .dd {
-  width: 300px;
-  margin: 0 65px;
+  width: 200px;
+  margin: 0 150px;
+  text-align: left;
 }
 
 @media only screen and (max-width: 952px) {
   .dropdown {
-    margin-top: 350px;
+    margin-top: 400px;
   }
 }
 
 @media (max-width: 667px) {
   .dropdown {
     width: 100%;
-    margin-top: 280px;
+    margin-top: 300px;
   }
   .dd {
-    margin: 40px 10px 0 10px;
+    margin: 100px 10px 0 10px;
   }
   #dd-1 {
     margin-left: 60px;

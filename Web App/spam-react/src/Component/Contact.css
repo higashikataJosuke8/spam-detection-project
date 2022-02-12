@@ -1,7 +1,7 @@
 
 /*map-bg*/
 .map-bg{
-	background: var(--black) url(https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg);
+	background: var(--black) url(map.png);
 	color: var(--white);
 	height: 350px;
 	padding: 170px 0;

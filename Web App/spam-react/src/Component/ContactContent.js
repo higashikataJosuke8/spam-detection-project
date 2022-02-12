@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 const ContactContent = () => {
     var form = document.getElementById("my-form");
@@ -23,7 +24,7 @@ const ContactContent = () => {
     return (
         <div>
             <div className="map-bg">
-                <h1>Call me when you want, call me when you need<br />call be by your nameeee</h1>
+                <h1>We'd love to hear from you<br />Get in touch with us by filling up the form below.</h1>
                 <div className="color-overlay"></div>
             </div>
 

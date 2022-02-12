@@ -36,16 +36,23 @@ body {
   margin: 50px 0;
 }
 
+.legend,
+.recharts-default-legend {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 @media only screen and (max-width: 952px) {
   .linegraph {
-    width: 70%;
+    width: 80%;
     margin: 40px auto;
   }
 }
 
 @media only screen and (max-width: 667px) {
   .linegraph {
-    width: 80%;
-    margin: 40px 0;
+    width: 90%;
+    margin: 40px auto;
   }
 }

@@ -5,30 +5,30 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 const data = [
   {
     name: "Maybe",
+    College: 0,
+    Degree_holder: 1,
+    Elementary: 0,
+    Junior_high: 0,
+    Senior_high: 0,
+    Total: 1,
+  },
+  {
+    name: "No",
+    College: 1,
+    Degree_holder: 1,
+    Elementary: 1,
+    Junior_high: 0,
+    Senior_high: 1,
+    Total: 4,
+  },
+  {
+    name: "Yes",
     College: 1,
     Degree_holder: 1,
     Elementary: 0,
     Junior_high: 0,
     Senior_high: 1,
     Total: 3,
-  },
-  {
-    name: "No",
-    College: 3,
-    Degree_holder: 8,
-    Elementary: 0,
-    Junior_high: 1,
-    Senior_high: 2,
-    Total: 14,
-  },
-  {
-    name: "Yes",
-    College: 1,
-    Degree_holder: 3,
-    Elementary: 0,
-    Junior_high: 1,
-    Senior_high: 1,
-    Total: 6,
   },
 ];
 
@@ -52,13 +52,7 @@ export default function BarGraph2() {
       <div className="graph">
         <BarChart
           width={
-            width >= 1348
-              ? 600
-              : width >= 952
-              ? 400
-              : width >= 720
-              ? 650
-              : 370
+            width >= 1348 ? 600 : width >= 952 ? 400 : width >= 720 ? 650 : 370
           }
           height={220}
           data={data}

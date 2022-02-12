@@ -23,7 +23,7 @@
 }
 
 .slick-slider {
-  width: 270px;
+  width: 450px;
   height: 270px;
   justify-content: center;
   align-items: center;
@@ -32,17 +32,25 @@
   box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
-
+.div-one h5, 
+.div-two h5,
+.div-three h5,
+.div-four h5,
+.div-five h5,
+.div-six h5{
+  margin: auto 20px;
+  margin-top: 10px;
+}
 .shape {
-  outline: 3px solid var(--primary);
+  outline: none;
   height: 200px;
   width: 175px;
-  margin: 35px auto;
+  margin: 20px auto 30px auto;
   display: flex;
   justify-content: center;
-  background-color: var(--primary);
+  background-color: var(--white);
   align-items: center;
-  color: white;
+  color: black;
 }
 
 .div-one,
@@ -67,6 +75,9 @@
 }
 
 @media (max-width: 952px) {
+  .slick-slider{
+    width: 320px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -75,6 +86,9 @@
     margin: 0 auto;
     padding: 0;
     margin-top: 10px;
+  }
+  .slick-slider{
+    width: 350px;
   }
 
   #car2 {

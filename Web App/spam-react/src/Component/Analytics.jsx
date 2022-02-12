@@ -6,6 +6,7 @@ import Carousel1 from "./Carousel1";
 import Carousel2 from "./Carousel2";
 import CardsPage from "./views/CardsPage";
 import AreaData from "./AreaData";
+
 const Analytics = () => {
   return (
     <div className="main">
@@ -15,19 +16,17 @@ const Analytics = () => {
         <div className="sub-sub" id="car1">
           <Carousel1 />
         </div>
-        <div className="area-graph">
-          <Charts />
-        </div>
         <div className="sub-sub" id="car2">
           <Carousel2 />
         </div>
       </div>
-
-      {/* <Dropdown /> */}
-      {/* <LineGraph /> */}
-
+      <div className="area-graph">
+        <Charts />
+      </div>
       <AreaData />
     </div>
+
+    
   );
 };
 

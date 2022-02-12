@@ -43,25 +43,23 @@ function AreaData() {
   const [chosen1, setChosen1] = useState([]);
   const [chosen2, setChosen2] = useState([]);
   const options1 = [
-    { value: "opt11", label: "Option 1" },
-    { value: "opt12", label: "Option 2" },
-    { value: "opt13", label: "Option 3" },
-    { value: "opt14", label: "Option 4" },
-    { value: "opt15", label: "Option 5" },
+    { value: "opt11", label: "Female" },
+    { value: "opt12", label: "Male" },
+    { value: "opt13", label: "Prefer not to say" },
+    { value: "opt14", label: "Total" },
   ];
 
   const options2 = [
-    { value: "opt21", label: "Option 1" },
-    { value: "opt22", label: "Option 2" },
-    { value: "opt23", label: "Option 3" },
-    { value: "opt24", label: "Option 4" },
-    { value: "opt25", label: "Option 5" },
+    { value: "opt21", label: "Maybe Hacked" },
+    { value: "opt22", label: "Hacked" },
+    { value: "opt23", label: "Not Hacked" },
+    { value: "opt24", label: "Total Hacked" },
   ];
 
-  //const [result1, dd1Value] = useState(options1.label);
-  //const [result2, dd2Value] = useState(options2.label);
+  const [result1, dd1Value] = useState(options1.label);
+  const [result2, dd2Value] = useState(options2.label);
   const dd1Handler = (e) => {
-    //dd1Value(e.value);
+    dd1Value(e.label);
     setChosen1(
       e.value === "opt11"
         ? option1
@@ -69,24 +67,20 @@ function AreaData() {
         ? option2
         : e.value === "opt13"
         ? option3
-        : e.value === "opt14"
-        ? option4
-        : option5
+        : option4
     );
     //console.log(chosen1);
   };
   const dd2Handler = (e) => {
-    //dd2Value(e.value);
+    dd2Value(e.label);
     setChosen2(
       e.value === "opt21"
-        ? option1
+        ? option21
         : e.value === "opt22"
-        ? option2
+        ? option22
         : e.value === "opt23"
-        ? option3
-        : e.value === "opt24"
-        ? option4
-        : option5
+        ? option23
+        :  option24
     );
     //console.log(chosen2);
   };
@@ -95,14 +89,17 @@ function AreaData() {
   // console.log(result2);
 
   var data = [
-    { name: "Page A", uv: chosen1[0], pv: chosen2[0] },
-    { name: "Page B", uv: chosen1[1], pv: chosen2[1] },
-    { name: "Page C", uv: chosen1[2], pv: chosen2[2] },
-    { name: "Page D", uv: chosen1[3], pv: chosen2[3] },
-    { name: "Page E", uv: chosen1[4], pv: chosen2[4] },
-    { name: "Page F", uv: chosen1[5], pv: chosen2[5] },
-    { name: "Page G", uv: chosen1[6], pv: chosen2[6] },
+    { name: "Degree Holder", uv: chosen1[0], pv: chosen2[0] },
+    { name: "College", uv: chosen1[1], pv: chosen2[1] },
+    { name: "Senior High", uv: chosen1[2], pv: chosen2[2] },
+    { name: "Junior", uv: chosen1[3], pv: chosen2[3] },
+    { name: "Elementary", uv: chosen1[4], pv: chosen2[4] },
+    { name: "Total", uv: chosen1[5], pv: chosen2[5] },
   ];
+  for (var i=0;i<=5;i++){
+    data[i][result1] = chosen1[i];
+    data[i][result2] = chosen2[i];
+  }
   const [width, setWidth] = useState(0);
   useEffect(() => {
     updateDimensions();
@@ -160,7 +157,7 @@ function AreaData() {
                 : width >= 940
                 ? 550
                 : width >= 720
-                ? 500
+                ? 550
                 : 350
             }
             height={
@@ -197,21 +194,21 @@ function AreaData() {
             />
             <Tooltip
               wrapperStyle={{
-                width: 85,
+                width: 100,
                 backgroundColor: "#f7fafd",
                 fontSize: "12px",
               }}
             />
             <Area
               type="monotone"
-              dataKey="uv"
+              dataKey={result1}
               stackId="1"
               stroke="#42AFFF"
               fill="#42AFFF"
             />
             <Area
               type="monotone"
-              dataKey="pv"
+              dataKey={result2}
               stackId="1"
               stroke="#21587F"
               fill="#21587F"
@@ -224,10 +221,13 @@ function AreaData() {
   );
 }
 
-const option1 = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
-const option2 = [2710, 6391, 7450, 3009, 4689, 2399, 6816];
-const option3 = [939, 9565, 9361, 1491, 4024, 9795, 6894];
-const option4 = [236, 1932, 3743, 3853, 8853, 7452, 7515];
-const option5 = [6071, 4198, 6782, 6101, 8319, 1213, 1129];
+const option1 = [4, 5, 8, 1, 2, 20];
+const option2 = [12, 5, 4, 2, 0, 23];
+const option3 = [3, 2, 2, 0, 1, 8];
+const option4 = [19, 12, 14, 3, 3, 51];
 
+const option21 = [5, 0, 3, 1, 0, 9];
+const option22 = [6, 4, 3, 1, 1, 15];
+const option23 = [8, 8, 8, 1, 2, 27];
+const option24 = [19, 12, 14, 3, 3, 51];
 export default AreaData;
