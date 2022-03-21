@@ -1,0 +1,61 @@
+.sub {
+  display: flex;
+  flex-direction: row;
+  margin: 50px auto;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1348px;
+}
+.main {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.area-graph {
+  align-self: flex-end;
+}
+.sub-sub{
+  margin: auto 20px;
+}
+
+@media only screen and (max-width: 952px) {
+  .sub-sub {
+    order: -1;
+    margin: 0 auto;
+  }
+
+  .area-graph {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .sub {
+    margin: 40px auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .sub {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .sub-sub {
+    padding: 0;
+    align-items: center;
+    order: 0;
+  }
+
+  .area-graph {
+    align-self: center;
+    margin: auto ;
+  }
+}

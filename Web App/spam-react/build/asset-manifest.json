@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.229e6205.chunk.css",
-    "main.js": "/static/js/main.16b38359.chunk.js",
-    "main.js.map": "/static/js/main.16b38359.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9897328d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9897328d.js.map",
+    "main.css": "/static/css/main.070dde90.chunk.css",
+    "main.js": "/static/js/main.d4ba7e92.chunk.js",
+    "main.js.map": "/static/js/main.d4ba7e92.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.37081a32.js",
+    "runtime-main.js.map": "/static/js/runtime-main.37081a32.js.map",
     "static/css/2.19627560.chunk.css": "/static/css/2.19627560.chunk.css",
-    "static/js/2.f7577864.chunk.js": "/static/js/2.f7577864.chunk.js",
-    "static/js/2.f7577864.chunk.js.map": "/static/js/2.f7577864.chunk.js.map",
-    "static/js/3.c7c8d7b4.chunk.js": "/static/js/3.c7c8d7b4.chunk.js",
-    "static/js/3.c7c8d7b4.chunk.js.map": "/static/js/3.c7c8d7b4.chunk.js.map",
+    "static/js/2.66e0dd90.chunk.js": "/static/js/2.66e0dd90.chunk.js",
+    "static/js/2.66e0dd90.chunk.js.map": "/static/js/2.66e0dd90.chunk.js.map",
+    "static/js/3.6f8b9c91.chunk.js": "/static/js/3.6f8b9c91.chunk.js",
+    "static/js/3.6f8b9c91.chunk.js.map": "/static/js/3.6f8b9c91.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.19627560.chunk.css.map": "/static/css/2.19627560.chunk.css.map",
-    "static/css/main.229e6205.chunk.css.map": "/static/css/main.229e6205.chunk.css.map",
-    "static/js/2.f7577864.chunk.js.LICENSE.txt": "/static/js/2.f7577864.chunk.js.LICENSE.txt",
+    "static/css/main.070dde90.chunk.css.map": "/static/css/main.070dde90.chunk.css.map",
+    "static/js/2.66e0dd90.chunk.js.LICENSE.txt": "/static/js/2.66e0dd90.chunk.js.LICENSE.txt",
+    "static/media/SPAM_EMAL.58e2fdc6.png": "/static/media/SPAM_EMAL.58e2fdc6.png",
+    "static/media/SPAM_SMS.bb32b7ae.png": "/static/media/SPAM_SMS.bb32b7ae.png",
     "static/media/aguilar.dc69060a.png": "/static/media/aguilar.dc69060a.png",
     "static/media/default_pic.90dc751e.jpg": "/static/media/default_pic.90dc751e.jpg",
+    "static/media/detekt-dark.24dd350e.png": "/static/media/detekt-dark.24dd350e.png",
     "static/media/detekt-logo.a6fead47.png": "/static/media/detekt-logo.a6fead47.png",
     "static/media/legaspi.395a4e12.png": "/static/media/legaspi.395a4e12.png",
     "static/media/loading.2115b6bd.gif": "/static/media/loading.2115b6bd.gif",
@@ -26,10 +29,10 @@
     "static/media/uy.b7056ff6.png": "/static/media/uy.b7056ff6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9897328d.js",
+    "static/js/runtime-main.37081a32.js",
     "static/css/2.19627560.chunk.css",
-    "static/js/2.f7577864.chunk.js",
-    "static/css/main.229e6205.chunk.css",
-    "static/js/main.16b38359.chunk.js"
+    "static/js/2.66e0dd90.chunk.js",
+    "static/css/main.070dde90.chunk.css",
+    "static/js/main.d4ba7e92.chunk.js"
   ]
 }

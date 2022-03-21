@@ -2,11 +2,11 @@ import "./style.css";
 import { useState } from "react";
 import Footer from "./Component/Footer";
 import Navbar from "./Component/Navbar";
-import Analytics from "./Component/Analytics";
-import Home from "./Component/Home";
-import About from "./Component/About";
-import Contact from "./Component/Contact";
-import Result from "./Component/Result";
+import Analytics from "./Component/Analytics/Analytics";
+import Home from "./Component/Home/Home";
+import About from "./Component/About/About";
+import Contact from "./Component/Contact/Contact";
+import Result from "./Component/Result/Result";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //"serve -s build", (package.json script start)
 //"react-scripts start"

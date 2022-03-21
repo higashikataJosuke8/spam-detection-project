@@ -47,3 +47,31 @@ def advanceresult():
     elif request.method == 'POST':
         return 'Advance result'
 
+
+@app.route('/analytics/website', methods = ['GET'])
+def getAnalytics():
+    if request.method == 'GET':
+        cursor = mysql.connection.cursor()
+        cursor.execute(''' SELECT * FROM resultxpam WHERE id=(SELECT MAX(id) FROM resultxpam)''')
+        getID = cursor.fetchone()
+        content = {'lastID': getID[0]}
+        cursor.execute(''' SELECT COUNT(*) FROM resultxpam WHERE type="Email"''')
+        getEmail = cursor.fetchone()
+        content['email'] = getEmail[0]
+        cursor.execute(''' SELECT COUNT(*) FROM resultxpam WHERE type="SMS"''')
+        getSMS = cursor.fetchone()
+        content['sms'] = getSMS[0]
+        cursor.execute(''' SELECT COUNT(*) FROM resultxpam WHERE result="Spam"''')
+        getSpam = cursor.fetchone()
+        content['spam'] = getSpam[0]
+        cursor.execute(''' SELECT COUNT(*) FROM resultxpam WHERE result="Ham"''')
+        getHam = cursor.fetchone()
+        content['ham'] = getHam[0]
+        cursor.execute(''' SELECT COUNT(*) FROM resultxpam WHERE result="Spam" AND type="Email"''')
+        getSpamEmail = cursor.fetchone()
+        content['spamemail'] = getSpamEmail[0]
+        cursor.execute(''' SELECT COUNT(*) FROM resultxpam WHERE result="Spam" AND type="SMS"''')
+        getSpamSMS = cursor.fetchone()
+        content['spamsms'] = getSpamSMS[0]
+        cursor.close()
+        return content

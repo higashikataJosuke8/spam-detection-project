@@ -1,0 +1,39 @@
+.dropdown {
+  font-family: "Poppins", sans-serif;
+  color: #348ccc;
+  font-weight: 600;
+  /* margin: 50px; */
+  display: flex;
+  justify-content: center;
+  /* margin: 50px 0; */
+  width: 100%;
+  margin: auto;
+}
+
+.dd {
+  width: 200px;
+  margin: 0 150px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 952px) {
+  .dropdown {
+    margin-top: 400px;
+  }
+}
+
+@media (max-width: 667px) {
+  .dropdown {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .dd {
+    margin: 10px 10px 0 10px;
+  }
+  #dd-1 {
+    margin-left: 60px;
+  }
+  #dd-2 {
+    margin-right: 60px;
+  }
+}
