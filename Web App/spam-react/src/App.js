@@ -44,7 +44,14 @@ function App() {
           <Route
             path="/result"
             exact
-            component={() => <Result type={type} content={content} />}
+            component={() => (content!=='') ? 
+            <Result type={type} content={content} /> : 
+            <Home 
+            type={type}
+            content={content}
+            changeType={changeType}
+            changeContent={changeContent}
+            />}
           />
         </Switch>
         <Footer />
