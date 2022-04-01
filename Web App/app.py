@@ -1,3 +1,6 @@
+import nltk
+nltk.download('stopwords')
+
 from SpamDetect import app
 from nltk.corpus import stopwords
 import os
