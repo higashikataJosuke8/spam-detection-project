@@ -21,6 +21,7 @@ def result_page():
     if request.method == 'POST':
         type = request.json['type']
         content = request.json['content']
+        print(f'Content Length: {len(content)}')
         cursor = mysql.connection.cursor()
         cursor.execute(''' INSERT INTO xpam (type, content) VALUES(%s,%s)''',(type,content))
         mysql.connection.commit()
