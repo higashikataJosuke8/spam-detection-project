@@ -3,33 +3,37 @@ import Chart from 'react-google-charts'
 import loading from './loading.gif'
 
 const Resultcont = (props) => {
-    var hamPercent = 50;
-    const [advance, setAdvance] = useState({"spamPercent":0, "result": '', 'type': '', 'content': ''});
+    const [hamPrecent, setHamPercent] = useState(50);
+    const [advance, setAdvance] = useState({"classification": '', "message":'', "model": '',"spam_precent":0});
     useEffect(() => {
         const content = props.content;
         const type = props.type;
         console.log(type, content);
-        fetch("/results", {'method': 'POST', 
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify({type, content})
-    }).then(response => {
-          if(response.status === 200){
-            return response.json()
-          }
-        }).then(data => setAdvance(data))
-        .catch(error => console.log(error))
+        let raw = JSON.stringify({"input_message": content})
+        
+        var requestOptions = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: raw
+        };
+        var path = (type==='Email')?'mail':'sms';
+        
+        fetch(`https://spamdetekt-api.ml/v1/predict/${path}`, requestOptions)
+        .then(response => response.json())
+        .then(result => setAdvance(result))
+        .catch(error => console.log('error', error))
       }, [props]);
       console.log(advance);
-    var spamPercent = advance.spamPercent;
-    hamPercent = 100-spamPercent;
-    
     const [show, setShow] = useState('');
     const [graph, setGraph] = useState('');
     const showAdvance = () => {
         setShow((show==='') ? 'active': '');
         setGraph((graph==='') ? 'active': '');
+        setHamPercent(100-parseFloat(advance.spam_precent));
+        console.log(parseFloat(advance.spam_precent))
     };
     const Loading = () => {
         return (
@@ -41,7 +45,7 @@ const Resultcont = (props) => {
     const ResultIcon = (props) => {
         return (
             <>
-                <i className={(props.result==='Spam')?'fa fa-exclamation-circle fa-3x result-spam':'fa fa-check-circle fa-3x result-ham'}></i>
+                <i className={(props.result==='spam')?'fa fa-exclamation-circle fa-3x result-spam':'fa fa-check-circle fa-3x result-ham'}></i>
             </>
         )
     }
@@ -50,13 +54,13 @@ const Resultcont = (props) => {
             <div className="result-head">
                 <h2>Results</h2>
                 <div className='result-desc'>
-                    {(advance.result==='')?<Loading></Loading>:<ResultIcon result={advance.result}></ResultIcon>}
-                    <h4>Your {advance.type} content is <b>{(advance.result==='')?"being processed...":advance.result}</b></h4>
+                    {(advance.classification==='')?<Loading></Loading>:<ResultIcon result={advance.classification}></ResultIcon>}
+                    <h4>Your {props.type} content is <b>{(advance.classification==='')?"being processed...":advance.classification}</b></h4>
                 </div>
             </div>
             <div className="panel-cont">
-                <div className={(advance.result==='')?'':(advance.result === 'Spam') ? 'result-panel spam' : 'result-panel ham'} id="spamHam">
-                    <p id="result-content">{advance.content}</p>
+                <div className={(advance.classification==='')?'':(advance.classification === 'spam') ? 'result-panel spam' : 'result-panel ham'} id="spamHam">
+                    <p id="result-content">{advance.message}</p>
                 </div>
             </div>
             <div className="btn-cont" id="btns">
@@ -68,16 +72,16 @@ const Resultcont = (props) => {
                 </div>
             </div>
             <div className="chart-cont" id="advResult">
-                <div id="piechart3" className= {graph}>
+                <div id="piechart3" className={graph}>
                     <Chart 
                         chartType = 'PieChart'
                         data= {[
                             ["Result", "Percent"],
-                            ["Ham", hamPercent],
-                            ["Spam", spamPercent],
+                            ["Ham", hamPrecent],
+                            ["Spam", parseFloat(advance.spam_precent)],
                           ]}
                         options = {{
-                            title: "Percentage",
+                            title: "Spam Percentage",
                             colors: ['#43da86', '#f2405d'],
                             backgroundColor: 'transparent',
                             pieHole: 0.4,

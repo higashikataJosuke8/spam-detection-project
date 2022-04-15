@@ -6,17 +6,20 @@ const data = [
     {
       name: "Hacked",
       Convenience: 1,
-      Privacy: 15
+      Privacy: 15,
+      Total: 16
     },
     {
       name: "Probably",
       Convenience: 1,
-      Privacy: 2
+      Privacy: 2,
+      Total: 3
     },
     {
       name: "Not Hacked",
       Convenience: 11,
-      Privacy: 36
+      Privacy: 36,
+      Total: 47
     },
   ];
 
@@ -88,6 +91,12 @@ export default function BarGraph6() {
             dataKey="Privacy"
             fill="#42AFFF"
             name="Privacy"
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="Total"
+            fill="#808080"
+            name="Total"
             isAnimationActive={false}
           />
 

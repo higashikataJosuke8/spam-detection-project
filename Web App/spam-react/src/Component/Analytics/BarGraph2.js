@@ -3,9 +3,9 @@ import "./BarGraph.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 const data = [
-  { name: "Scammed", Junior_high: 0, Senior_high: 1, College: 1, Degree_holder: 1 },
-  { name: "Probably", Junior_high: 1, Senior_high: 2, College: 3, Degree_holder: 8 },
-  { name: "Not Scammed", Junior_high: 1, Senior_high: 1, College: 1, Degree_holder: 3 },
+  { name: "Scammed", Junior_high: 0, Senior_high: 1, College: 1, Degree_holder: 1, Total: 18 },
+  { name: "Probably", Junior_high: 1, Senior_high: 2, College: 3, Degree_holder: 8, Total: 6 },
+  { name: "Not Scammed", Junior_high: 1, Senior_high: 1, College: 1, Degree_holder: 3, Total: 42 },
 ];
 
 export default function BarGraph2() {
@@ -94,6 +94,12 @@ export default function BarGraph2() {
             dataKey="Degree_holder"
             fill="#42AFFF"
             name="Degree Holder"
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="Total"
+            fill="#808080"
+            name="Total"
             isAnimationActive={false}
           />
 

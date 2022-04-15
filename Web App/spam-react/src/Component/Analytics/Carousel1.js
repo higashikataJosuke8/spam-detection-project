@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import spam_email from './SPAM_EMAL.png'
 import spam_sms from './SPAM_SMS.png'
-import AnalyticsWebsite from './AnalyticsWebsite'
-import BarGraph11 from "./BarGraph11";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
@@ -93,18 +91,6 @@ export default class Carousel1 extends Component {
                 <Tooltip />
               </PieChart>
             </div>
-          </div>
-          <div className="div-five">
-            <h5>Submitted Results from the Prediction Model</h5>
-            <div className="shape">
-              <AnalyticsWebsite />
-            </div>  
-          </div>
-          <div className="div-six">
-            <h5>Submitted Results from the Prediction Model</h5>
-            <div className="shape">
-              <BarGraph11 />
-            </div>  
           </div>
         </Slider>
       </div>

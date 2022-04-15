@@ -3,9 +3,9 @@ import "./BarGraph.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 const sendPhoneOnSusRecip = [
-    { name: "Sent", Female: 5, Male: 8, Queer: 0},
-    { name: "Probably", Female: 8, Male: 8, Queer: 0},
-    { name: "Not Entered", Female: 16, Male: 20, Queer: 1}
+    { name: "Sent", Female: 5, Male: 8, Queer: 0, Total: 13 },
+    { name: "Probably", Female: 8, Male: 8, Queer: 0, Total: 16 },
+    { name: "Not Entered", Female: 16, Male: 20, Queer: 1, Total: 37 }
 ]
 export default function BarGraph8() {
   const [width, setWidth] = useState(0);
@@ -81,6 +81,12 @@ export default function BarGraph8() {
             dataKey="Queer"
             fill="#42afff"
             name="Queer"
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="Total"
+            fill="#808080"
+            name="Total"
             isAnimationActive={false}
           />
 

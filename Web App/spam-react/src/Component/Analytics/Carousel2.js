@@ -8,13 +8,12 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis, PieChart, Pie, Tooltip} fro
 const averageAgebyGender = [
   { name: "Female", amt: 30, Female: 21.62 },
   { name: "Male", amt: 30, Male: 21.33 },
-  { name: "Queer", amt: 30, Queer: 26 },
-  { name: "Total", amt: 30, Total: 21.53 }
+  { name: "Queer", amt: 30, Queer: 26 }
 ]
 const educationalAttainment = [
-  { name: "Working", "Junior High": 0, "Senior High": 2, College: 6 , "Degree Holder": 3, amt: 40 },
-  { name: "Partially Working", "Junior High": 0, "Senior High": 0, College: 3, "Degree Holder": 0, amt: 40 },
-  { name: "Non-Working", "Junior High": 1, "Senior High": 7, College: 44, "Degree Holder": 0, amt: 40 }
+  { name: "Working", "Junior High": 0, "Senior High": 2, College: 6 , "Degree Holder": 3, "Total": 11, amt: 40 },
+  { name: "Partially Working", "Junior High": 0, "Senior High": 0, College: 3, "Degree Holder": 0, "Total": 3, amt: 40 },
+  { name: "Non-Working", "Junior High": 1, "Senior High": 7, College: 44, "Degree Holder": 0,"Total": 52, amt: 40 }
 ]
 const convOrPriv = [
   { name: "Convienience", Female: 5, Male: 8, Queer: 0, Total: 13},
@@ -90,7 +89,6 @@ export default class Carousel2 extends Component {
               <Bar dataKey="Female" fill="#267999" />
               <Bar dataKey="Male" fill="#348ccc" />
               <Bar dataKey="Queer" fill="#3b9ee6" />
-              <Bar dataKey="Total" fill="#808080" />
             </BarChart>
             </div>
           </div>
@@ -116,7 +114,8 @@ export default class Carousel2 extends Component {
               <Bar dataKey="Junior High" fill="#267999" />
               <Bar dataKey="Senior High" fill="#348ccc" />
               <Bar dataKey="College" fill="#3b9ee6" />
-              <Bar dataKey="Degree Holder" fill="#808080" />
+              <Bar dataKey="Degree Holder" fill="#42afff" />
+              <Bar dataKey="Total" fill="#808080" />
             </BarChart>
             </div>
           </div>

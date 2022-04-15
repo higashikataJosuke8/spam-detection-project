@@ -4,9 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 
 const effectEmailProd = [
-    { name: "Always Using", "Always Affected": 1, "Usually Affected": 2, "Rarely Affected": 5, "Not Affected": 15, amt: 30},
-    { name: "Usually Using", "Always Affected": 2, "Usually Affected": 4, "Rarely Affected": 12, "Not Affected": 14, amt: 30},
-    { name: "Rarely Using", "Always Affected": 0, "Usually Affected": 1, "Rarely Affected": 2, "Not Affected": 2, amt: 30}
+    { name: "Frequently", "Highly Bothering": 1, "Usually Bothering": 5, "Rarely Bothering": 14, "Not Bothering": 10, "Total": 33, amt: 30},
+    { name: "Usually", "Highly Bothering": 2, "Usually Bothering": 4, "Rarely Bothering": 12, "Not Bothering": 13, "Total": 31, amt: 30},
+    { name: "Rarely", "Highly Bothering": 0, "Usually Bothering": 1, "Rarely Bothering": 2, "Not Bothering": 2, "Total": 5, amt: 30}
 ]
 export default function BarGraph9() {
   const [width, setWidth] = useState(0);
@@ -67,29 +67,35 @@ export default function BarGraph9() {
 
           
           <Bar
-            dataKey="Always Affected"
+            dataKey="Highly Bothering"
             fill="#267999"
-            name="Always Affected"
+            name="Highly Bothering"
             isAnimationActive={false}
           />
           <Bar
-            dataKey="Usually Affected"
+            dataKey="Usually Bothering"
             fill="#348ccc"
-            name="Usually Affected"
+            name="Usually Bothering"
             isAnimationActive={false}
           />
           <Bar
-            dataKey="Rarely Affected"
+            dataKey="Rarely Bothering"
             fill="#42afff"
-            name="Rarely Affected"
+            name="Rarely Bothering"
             isAnimationActive={false}
           />
           <Bar
-            dataKey="Not Affected"
-            fill="#808080"
-            name="Not Affected"
+            dataKey="Not Bothering"
+            fill="#3B9EE6"
+            name="Not Bothering"
             isAnimationActive={false}
             />
+            <Bar
+              dataKey="Total"
+              fill="#808080"
+              name="Total"
+              isAnimationActive={false}
+              />
 
           {showLegend && (
             <Legend

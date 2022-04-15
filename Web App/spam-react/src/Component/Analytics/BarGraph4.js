@@ -9,6 +9,7 @@ const data = [
     Senior_high: 1,
     College: 14,
     Degree_holder: 1,
+    Total: 16
   },
   {
     name: "Probably",
@@ -16,6 +17,7 @@ const data = [
     Senior_high: 1,
     College: 2,
     Degree_holder: 0,
+    Total: 3
   },
   {
     name: "Not Hacked",
@@ -23,6 +25,7 @@ const data = [
     Senior_high: 7,
     College: 37,
     Degree_holder: 2,
+    Total: 47
   },
 ];
 
@@ -106,6 +109,12 @@ export default function BarGraph4() {
             dataKey="Degree_holder"
             fill="#276999"
             name="Degree Holder"
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="Total"
+            fill="#808080"
+            name="Total"
             isAnimationActive={false}
           />
 
