@@ -13,6 +13,7 @@ const Analytics = () => {
   return (
     <div className="main">
       <Logo />
+
       <CardsPage />
       {/* <AnalyticsWebsite /> */}
       <div className="sub">
@@ -30,9 +31,10 @@ const Analytics = () => {
       <div>
         <AreaData />
       </div>
+      <div id="footer">
+        <h6>Source: Big Data Group</h6>
+      </div>
     </div>
-
-    
   );
 };
 

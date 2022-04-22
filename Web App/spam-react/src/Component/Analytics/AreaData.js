@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import BarGraph from "./BarGraph";
-import BarGraph1 from './BarGraph1'
-import BarGraph2 from './BarGraph2'
-import BarGraph3 from './BarGraph3'
-import BarGraph4 from './BarGraph4'
-import BarGraph5 from './BarGraph5'
-import BarGraph6 from './BarGraph6'
+import BarGraph1 from "./BarGraph1";
+import BarGraph2 from "./BarGraph2";
+import BarGraph3 from "./BarGraph3";
+import BarGraph4 from "./BarGraph4";
+import BarGraph5 from "./BarGraph5";
+import BarGraph6 from "./BarGraph6";
 
 import "./Dropdown.css";
 import Select from "react-select";
@@ -51,25 +51,25 @@ function AreaData() {
   const [chosen2, setChosen2] = useState([]);
   const options1 = [
     { value: "opt11", label: "Hacked" },
-    { value: "opt12", label: "Scammed" }
+    { value: "opt12", label: "Scammed" },
   ];
 
   const options2 = [
     { value: "opt21", label: "Gender" },
     { value: "opt22", label: "Education" },
-    { value: "opt23", label: "Security" }
+    { value: "opt23", label: "Security" },
   ];
 
   const [result1, dd1Value] = useState(options1.label);
   const [result2, dd2Value] = useState(options2.label);
   const dd1Handler = (e) => {
     dd1Value(e.label);
-    setChosen1( e.value );
+    setChosen1(e.value);
     //console.log(chosen1);
   };
   const dd2Handler = (e) => {
     dd2Value(e.label);
-    setChosen2( e.value );
+    setChosen2(e.value);
     //console.log(chosen2);
   };
 
@@ -84,7 +84,7 @@ function AreaData() {
     { name: "Elementary", uv: chosen1[4], pv: chosen2[4] },
     { name: "Total", uv: chosen1[5], pv: chosen2[5] },
   ];
-  for (var i=0;i<=5;i++){
+  for (var i = 0; i <= 5; i++) {
     data[i][result1] = chosen1[i];
     data[i][result2] = chosen2[i];
   }
@@ -128,24 +128,29 @@ function AreaData() {
       {/* start of graph */}
       <div className="graph-cont">
         <div className="linegraph">
-          {(chosen1==="opt11") ?
-              (chosen2==="opt21") ? 
-              < BarGraph3 /> :
-              (chosen2==="opt22") ?
-              < BarGraph4 /> :
-              (chosen2==="opt23") ?
-              < BarGraph6 /> :
-              < BarGraph />
-            :(chosen1 === "opt12") ?
-              (chosen2==="opt21") ? 
-              < BarGraph1 /> :
-              (chosen2==="opt22") ?
-              < BarGraph2 /> :
-              (chosen2==="opt23") ?
-              < BarGraph5 /> :
-              < BarGraph />
-            : <BarGraph/>
-            }
+          {chosen1 === "opt11" ? (
+            chosen2 === "opt21" ? (
+              <BarGraph3 />
+            ) : chosen2 === "opt22" ? (
+              <BarGraph4 />
+            ) : chosen2 === "opt23" ? (
+              <BarGraph6 />
+            ) : (
+              <BarGraph />
+            )
+          ) : chosen1 === "opt12" ? (
+            chosen2 === "opt21" ? (
+              <BarGraph1 />
+            ) : chosen2 === "opt22" ? (
+              <BarGraph2 />
+            ) : chosen2 === "opt23" ? (
+              <BarGraph5 />
+            ) : (
+              <BarGraph />
+            )
+          ) : (
+            <BarGraph />
+          )}
         </div>
       </div>
       {/* end of graph */}
