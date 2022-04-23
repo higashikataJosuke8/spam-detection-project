@@ -3,8 +3,8 @@ import Chart from 'react-google-charts'
 import loading from './loading.gif'
 
 const Resultcont = (props) => {
-    const [hamPrecent, setHamPercent] = useState(50);
-    const [advance, setAdvance] = useState({"classification": '', "message":'', "model": '',"spam_precent":0});
+    const [hamPercent, setHamPercent] = useState(50);
+    const [advance, setAdvance] = useState({"classification": '', "message":'', "model": '',"spam_percent":0});
     useEffect(() => {
         const content = props.content;
         const type = props.type;
@@ -32,8 +32,8 @@ const Resultcont = (props) => {
     const showAdvance = () => {
         setShow((show==='') ? 'active': '');
         setGraph((graph==='') ? 'active': '');
-        setHamPercent(100-parseFloat(advance.spam_precent));
-        console.log(parseFloat(advance.spam_precent))
+        setHamPercent(100-parseFloat(advance.spam_percent));
+        console.log(parseFloat(advance.spam_percent))
     };
     const Loading = () => {
         return (
@@ -77,8 +77,8 @@ const Resultcont = (props) => {
                         chartType = 'PieChart'
                         data= {[
                             ["Result", "Percent"],
-                            ["Ham", hamPrecent],
-                            ["Spam", parseFloat(advance.spam_precent)],
+                            ["Ham", hamPercent],
+                            ["Spam", parseFloat(advance.spam_percent)],
                           ]}
                         options = {{
                             title: "Spam Percentage",
