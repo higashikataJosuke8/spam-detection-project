@@ -23,13 +23,15 @@ export default function BarGraph() {
       <div className="graph">
         <BarChart
           width={
-            width >= 1348 ? 600 : width >= 952 ? 400 : width >= 720 ? 650 : 370
+            width >= 1348 ? 1100 : width >= 1024 ? 900 : width >= 952 ? 400 : width >= 720 ? 700 : 370
           }
-          height={220}
+          height={
+            width >= 1348 ? 400 : width >= 1024 ? 300 : width >= 952 ? 300 : width >= 720 ? 300 : 220
+          }
           data={null}
           barCategoryGap={
             width >= 1348
-              ? 30
+              ? 80
               : width >= 952
               ? 30
               : width >= 940

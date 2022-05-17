@@ -29,24 +29,36 @@ export default function BarGraph2() {
         <BarChart
           width={
             width >= 1348
-              ? 600
+              ? 1100
+              : width >= 1024
+              ? 900
               : width >= 952
               ? 400
               : width >= 720
-              ? 650
+              ? 700
               : 370
           }
-          height={220}
+          height={
+            width >= 1348
+              ? 400
+              : width >= 1024
+              ? 300
+              : width >= 952
+              ? 300
+              : width >= 720
+              ? 300
+              : 220
+          }
           data={data}
           barCategoryGap={
             width >= 1348
-              ? 30
+              ? 80
+              : width >= 1024
+              ? 70
               : width >= 952
-              ? 30
-              : width >= 940
               ? 25
               : width >= 720
-              ? 30
+              ? 40
               : 20
           }
           margin={{

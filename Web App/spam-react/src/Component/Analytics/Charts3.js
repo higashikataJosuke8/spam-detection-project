@@ -66,7 +66,7 @@ function Charts3() {
     <div className="main">
       <div className="title">
       </div>
-      <div className="btn-container-analytics">
+      <div className="btn-container-analytics" id="usage">
         <h3 id="title">Effect of Spam on Usage Productivity</h3>
         <div id="btns-analytics">
           <button

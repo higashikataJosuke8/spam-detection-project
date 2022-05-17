@@ -67,7 +67,7 @@ function Charts2() {
     <div className="main">
       <div className="title">
       </div>
-      <div className="btn-container-analytics">
+      <div className="btn-container-analytics" id="suspicious">
         <h3 id="title">Providing Details to a Suspicious Platform</h3>
         <div id="btns-analytics">
           <button

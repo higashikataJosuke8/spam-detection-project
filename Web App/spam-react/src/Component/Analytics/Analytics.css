@@ -13,7 +13,12 @@
   text-align: center;
 }
 .area-graph {
-  align-self: flex-end;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
 }
 .sub-sub {
   margin: auto 20px;
@@ -26,6 +31,19 @@
   margin-right: 10px;
   color: #808080;
 }
+@media only screen and (max-width: 1024px) {
+  .main{
+    width: 100%;
+  }
+ .area-graph{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+ }
+}
 
 @media only screen and (max-width: 952px) {
   .sub-sub {
@@ -35,6 +53,7 @@
 
   .area-graph {
     width: 100%;
+    display: inline;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -54,8 +73,15 @@
     color: #808080;
   }
 }
-
+@media only screen and (max-width: 768px) {
+  .sub-sub{
+    margin: auto 5px;
+  }
+}
 @media only screen and (max-width: 667px) {
+  .area-graph{
+    display: inline;
+  }
   .sub {
     flex-direction: column;
     justify-content: center;
@@ -77,9 +103,10 @@
 
   #footer {
     /* width: 90vw; */
+    width: 95%;
     display: flex;
     justify-content: flex-end;
-    margin-right: 10px;
+    margin-right: 0;
     color: #808080;
   }
 }

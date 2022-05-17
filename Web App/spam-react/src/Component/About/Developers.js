@@ -5,7 +5,9 @@ import dev1 from './Developers/ultraaa.png'
 import dev2 from './Developers/luyun.png'
 import dev3 from './Developers/aguilar.png'
 import dev4 from './Developers/uy.png'
+import dev5 from './Developers/estiller.png'
 import dev6 from './Developers/legaspi.png'
+import dev7 from './Developers/pingoy.png'
 import defaultPic from './Developers/default_pic.jpg'
 
 const Developers = () => {
@@ -37,13 +39,13 @@ const Developers = () => {
                     <Dev dev="Raziel Nicolas Uy" user='@hana' role='Data Scientist' quote='Ad astra per aspera' class={active === 'check4' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check4' imgSrc={dev4}/>
                     
                     <input type="checkbox" id="check5" name="coder" onClick={e => openDev(e)} />
-                    <Dev dev="Brian Christian Estiller" user='@briii' role='Data Scientist' quote='acta non verba' class={active === 'check5' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check5' imgSrc={defaultPic}/>
+                    <Dev dev="Brian Christian Estiller" user='@briii' role='Data Scientist' quote='acta non verba' class={active === 'check5' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check5' imgSrc={dev5}/>
                     
                     <input type="checkbox" id="check6" name="coder" onClick={e => openDev(e)} />
                     <Dev dev="Matthew Legaspi" user='@Coconut' role='Data Analyst' quote='Alea iacta est' class={active === 'check6' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check6' imgSrc={dev6}/>
                     
                     <input type="checkbox" id="check7" name="coder" onClick={e => openDev(e)} />
-                    <Dev dev="Dennise Pingoy" user='@Daze' role='Data Analyst' quote='As astra abossysque' class={active === 'check7' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check7' imgSrc={defaultPic}/>
+                    <Dev dev="Dennise Pingoy" user='@Daze' role='Data Analyst' quote='As astra abossysque' class={active === 'check7' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check7' imgSrc={dev7}/>
                     
                     <input type="checkbox" id="check8" name="coder" onClick={e => openDev(e)} />
                     <Dev dev="Christian Marcial" user='@Sealed' role='Data Analyst' quote='Pax Optimuma rerum' class={active === 'check8' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check8' imgSrc={defaultPic}/>

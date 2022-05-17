@@ -4,8 +4,9 @@ import loading from './loading.gif'
 
 const Resultcont = (props) => {
     const [hamPercent, setHamPercent] = useState(50);
-    const [advance, setAdvance] = useState({"classification": '', "message":'', "model": '',"spam_percent":0});
+    const [advance, setAdvance] = useState({"classification": '', "input_message":'', "model": '',"spam_percent":0});
     useEffect(() => {
+        var urlCheck = false;
         const content = props.content;
         const type = props.type;
         console.log(type, content);
@@ -20,8 +21,18 @@ const Resultcont = (props) => {
             body: raw
         };
         var path = (type==='Email')?'mail':'sms';
-        
-        fetch(`https://spamdetekt-api.ml/v1/predict/${path}`, requestOptions)
+        var url = `https://spamdetekt-api.ml/v1/predict/${path}`;
+        fetch(url, requestOptions)
+        .then(response => {
+            console.log("ok")
+            urlCheck = (response.ok) ? true : false;
+        })
+        .then(response => console.log("ok") )
+        .catch(error => console.log(error) );
+        if(!urlCheck){
+            url = `http://spamdetekt-api.ml/v1/predict/${path}`;
+        }
+        fetch(url, requestOptions)
         .then(response => response.json())
         .then(result => setAdvance(result))
         .catch(error => console.log('error', error))
@@ -60,7 +71,7 @@ const Resultcont = (props) => {
             </div>
             <div className="panel-cont">
                 <div className={(advance.classification==='')?'':(advance.classification === 'spam') ? 'result-panel spam' : 'result-panel ham'} id="spamHam">
-                    <p id="result-content">{advance.message}</p>
+                    <p id="result-content">{advance.input_message}</p>
                 </div>
             </div>
             <div className="btn-cont" id="btns">

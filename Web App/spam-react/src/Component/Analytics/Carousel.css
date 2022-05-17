@@ -23,8 +23,8 @@
 }
 
 .slick-slider {
-  width: 450px;
-  height: 270px;
+  width: 600px;
+  height: 300px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -76,13 +76,27 @@
   font-size: 22px;
   margin-bottom: 10px;
 }
-
+@media (max-width: 1024px) {
+  .slick-slider{
+    width: 445px;
+    height: 280px;
+  }
+}
 @media (max-width: 952px) {
   .slick-slider{
     width: 320px;
   }
 }
-
+@media (max-width: 768px) {
+  .slick-slider{
+    width: 340px;
+    height: 280px;
+  }
+  .shape img{
+    width: 150%;
+    height: 80%
+  }
+}
 @media (max-width: 600px) {
   .body {
     width: 100%;
@@ -91,7 +105,7 @@
     margin-top: 10px;
   }
   .slick-slider{
-    width: 350px;
+    width: 340px;
   }
   .shape img{
     width: 150%;
