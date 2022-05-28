@@ -8,6 +8,7 @@ import dev4 from './Developers/uy.png'
 import dev5 from './Developers/estiller.png'
 import dev6 from './Developers/legaspi.png'
 import dev7 from './Developers/pingoy.png'
+import dev8 from './Developers/MARCIAL.png'
 import defaultPic from './Developers/default_pic.jpg'
 
 const Developers = () => {
@@ -48,7 +49,7 @@ const Developers = () => {
                     <Dev dev="Dennise Pingoy" user='@Daze' role='Data Analyst' quote='As astra abossysque' class={active === 'check7' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check7' imgSrc={dev7}/>
                     
                     <input type="checkbox" id="check8" name="coder" onClick={e => openDev(e)} />
-                    <Dev dev="Christian Marcial" user='@Sealed' role='Data Analyst' quote='Pax Optimuma rerum' class={active === 'check8' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check8' imgSrc={defaultPic}/>
+                    <Dev dev="Christian Marcial" user='@Sealed' role='Data Analyst' quote='Pax Optimuma rerum' class={active === 'check8' ? 'active-wrapper': active === ''? 'wrapper': 'small'} for='check8' imgSrc={dev8}/>
                 </div>
             </div>
         </>
