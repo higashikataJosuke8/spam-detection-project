@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.a90cbc05.chunk.css",
-    "main.js": "/static/js/main.584a6093.chunk.js",
-    "main.js.map": "/static/js/main.584a6093.chunk.js.map",
+    "main.js": "/static/js/main.2c4f56f5.chunk.js",
+    "main.js.map": "/static/js/main.2c4f56f5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.37081a32.js",
     "runtime-main.js.map": "/static/js/runtime-main.37081a32.js.map",
     "static/css/2.19627560.chunk.css": "/static/css/2.19627560.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.19627560.chunk.css.map": "/static/css/2.19627560.chunk.css.map",
     "static/css/main.a90cbc05.chunk.css.map": "/static/css/main.a90cbc05.chunk.css.map",
     "static/js/2.e25d72ea.chunk.js.LICENSE.txt": "/static/js/2.e25d72ea.chunk.js.LICENSE.txt",
-    "static/media/MARCIAL.e69d2b19.png": "/static/media/MARCIAL.e69d2b19.png",
+    "static/media/MARCIAL.e74efa8c.png": "/static/media/MARCIAL.e74efa8c.png",
     "static/media/SPAM_EMAL.58e2fdc6.png": "/static/media/SPAM_EMAL.58e2fdc6.png",
     "static/media/SPAM_SMS.bb32b7ae.png": "/static/media/SPAM_SMS.bb32b7ae.png",
     "static/media/aguilar.dc69060a.png": "/static/media/aguilar.dc69060a.png",
@@ -36,6 +36,6 @@
     "static/css/2.19627560.chunk.css",
     "static/js/2.e25d72ea.chunk.js",
     "static/css/main.a90cbc05.chunk.css",
-    "static/js/main.584a6093.chunk.js"
+    "static/js/main.2c4f56f5.chunk.js"
   ]
 }
