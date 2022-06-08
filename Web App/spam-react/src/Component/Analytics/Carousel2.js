@@ -6,48 +6,34 @@ import "./Carousel.css";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, PieChart, Pie, Tooltip} from 'recharts';
 
 const averageAgebyGender = [
-  { name: "Female", amt: 30, Female: 21.62 },
-  { name: "Male", amt: 30, Male: 21.33 },
-  { name: "Queer", amt: 30, Queer: 26 }
+  { name: "Female", amt: 30, Female: 22.2 },
+  { name: "Male", amt: 30, Male: 21.64 },
+  { name: "Queer", amt: 30, Queer: 26 },
+  { name: "Prefer Not", amt: 30, Queer: 22 }
 ]
 const educationalAttainment = [
-  { name: "Working", "Junior High": 0, "Senior High": 2, College: 6 , "Degree Holder": 3, "Total": 11, amt: 40 },
-  { name: "Partially Working", "Junior High": 0, "Senior High": 0, College: 3, "Degree Holder": 0, "Total": 3, amt: 40 },
-  { name: "Non-Working", "Junior High": 1, "Senior High": 7, College: 44, "Degree Holder": 0,"Total": 52, amt: 40 }
+  { name: "Working", "Junior High": 0, "Senior High": 2, College: 11 , "Degree Holder": 4, "Total": 17, amt: 40 },
+  { name: "Partially Working", "Junior High": 0, "Senior High": 0, College: 4, "Degree Holder": 1, "Total": 5, amt: 40 },
+  { name: "Non-Working", "Junior High": 1, "Senior High": 12, College: 61, "Degree Holder": 4,"Total": 67, amt: 40 }
 ]
 const convOrPriv = [
-  { name: "Convienience", Female: 5, Male: 8, Queer: 0, Total: 13},
-  { name: "Privacy", Female: 24, Male: 28, Queer: 1, Total: 53}
+  { name: "Convienience", Female: 8, Male: 10, Queer: 0, "Prefer Not": 1, Total: 19},
+  { name: "Privacy", Female: 41, Male: 37, Queer: 1, "Prefer Not": 2, Total: 81}
 ]
 
 const regionS = [
-  { name: 'NCR', value: 44, fill: "#276999"},
-  { name: 'Region IV-A', value: 12, fill: "#348ccc"},
-  { name: 'Central Luzon', value: 7, fill: "#42afff"},
-  { name: 'MIMAROPA', value: 1, fill: "#808080"}
-]
-const cityRegion = [
-    { name: "Manila", value: 29, fill: "#276999" },
-    { name: "Quezon City", value: 4, fill: "#276999" },
-    { name: "Caloocan", value: 2, fill: "#276999" },
-    { name: "Pasig", value: 2, fill: "#276999" },
-    { name: "Makati", value: 2, fill: "#276999" },
-    { name: "Malabon", value: 2, fill: "#276999"},
-    { name: "Mandaluyong", value: 1, fill: "#276999"},
-    { name: "Marikina", value: 1, fill: "#276999"}, 
-    { name: "Las Pinas", value: 1, fill: "#276999"},
-    { name: "Rizal", value: 6, fill: "#348ccc"}, 
-    { name: "Cavite", value: 5, fill: "#348ccc"},
-    { name: "Batangas", value: 1, fill: "#348ccc"},
-    { name: "Bulacan", value: 5, fill: "#42afff"},
-    { name: "Pampanga", value: 2, fill: "#42afff"},
-    { name: "Marinduque", value: 1, fill: "#808080"}
+  { name: 'NCR', value: 64, fill: "#276999"},
+  { name: 'CALABARZON', value: 18, fill: "#348ccc"},
+  { name: 'Central Luzon', value: 9, fill: "#42afff"},
+  { name: 'MIMAROPA', value: 2, fill: "#3b9ee6"},
+  { name: 'Eastern Visayas', value: 2, fill: "#808080"},
+  { name: 'Zamboanga Peninsula', value: 2, fill: "#eeeeee"}
 ]
 const legitEmail = [
-  { name: 'Rarely', value: 32, fill: "#276999"},
-  { name: "Usually", value: 25, fill: "#348ccc"},
-  { name: "Always", value: 4, fill: "#42afff"},
-  { name: "Not at All", value: 5, fill: "#808080"}
+  { name: 'Rarely', value: 52, fill: "#276999"},
+  { name: "Usually", value: 34, fill: "#348ccc"},
+  { name: "Always", value: 7, fill: "#42afff"},
+  { name: "Not at All", value: 7, fill: "#808080"}
 ]
 
 export default class Carousel2 extends Component {
@@ -89,6 +75,7 @@ export default class Carousel2 extends Component {
               <Bar dataKey="Female" fill="#267999" />
               <Bar dataKey="Male" fill="#348ccc" />
               <Bar dataKey="Queer" fill="#3b9ee6" />
+              <Bar dataKey="Prefer Not" fill="#eeeeee" />
             </BarChart>
             </div>
           </div>
@@ -141,7 +128,8 @@ export default class Carousel2 extends Component {
               <Bar dataKey="Female" fill="#267999" />
               <Bar dataKey="Male" fill="#348ccc" />
               <Bar dataKey="Queer" fill="#42afff" />
-              <Bar dataKey="Total" fill="#808080" />
+              <Bar dataKey="Prefer Not" fill="#808080" />
+              <Bar dataKey="Total" fill="#eeeeee" />
             </BarChart>
             </div>
           </div>
@@ -155,19 +143,8 @@ export default class Carousel2 extends Component {
                 data={regionS}
                 cx="50%"
                 cy="50%"
-                outerRadius={50}
-                fill="#fff"
-              />
-              <Pie
-                dataKey="value"
-                isAnimationActive={false}
-                data={cityRegion}
-                cx="50%"
-                cy="50%"
-                innerRadius={60}
                 outerRadius={80}
                 fill="#fff"
-                label
               />
               <Tooltip />
             </PieChart>

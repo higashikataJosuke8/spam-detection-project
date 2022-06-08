@@ -3,9 +3,9 @@ import "./BarGraph.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 const data = [
-  { name: "Hacked", Female: 6, Male: 10, Queer: 0, Total: 16 },
-  { name: "Probably", Female: 2, Male: 1, Queer: 0, Total: 3 },
-  { name: "Not Hacked", Female: 21, Male: 25, Queer: 1, Total: 47 },
+  { name: "Hacked", Female: 7, Male: 10, Queer: 0, "Prefer Not": 1, Total: 18 },
+  { name: "Probably", Female: 3, Male: 1, Queer: 0, "Prefer Not": 0, Total: 4 },
+  { name: "Not Hacked", Female: 39, Male: 36, Queer: 1, "Prefer Not": 2, Total: 78 },
 ];
 
 export default function BarGraph3() {
@@ -86,8 +86,14 @@ export default function BarGraph3() {
             isAnimationActive={false}
           />
           <Bar
-            dataKey="Total"
+            dataKey="Prefer Not"
             fill="#808080"
+            name="Total"
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="Total"
+            fill="#eeeeee"
             name="Total"
             isAnimationActive={false}
           />

@@ -7,25 +7,25 @@ const data = [
     name: "Hacked",
     Junior_high: 0,
     Senior_high: 1,
-    College: 14,
+    College: 15,
     Degree_holder: 1,
-    Total: 16
+    Total: 17
   },
   {
     name: "Probably",
     Junior_high: 0,
     Senior_high: 1,
-    College: 2,
+    College: 4,
     Degree_holder: 0,
-    Total: 3
+    Total: 5
   },
   {
     name: "Not Hacked",
     Junior_high: 1,
-    Senior_high: 7,
-    College: 37,
-    Degree_holder: 2,
-    Total: 47
+    Senior_high: 12,
+    College: 57,
+    Degree_holder: 8,
+    Total: 78
   },
 ];
 

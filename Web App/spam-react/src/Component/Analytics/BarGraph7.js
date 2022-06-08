@@ -4,9 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 
 const enterDataOnSusWebsites = [
-    { name: "Entered", Female: 7, Male: 11, Queer: 0, Total: 18 },
-    { name: "Probably", Female: 10, Male: 9, Queer: 0, Total: 19 },
-    { name: "Not Entered", Female: 12, Male: 16, Queer: 1, Total: 29 }
+    { name: "Entered", Female: 9, Male: 14, Queer: 0, "Prefer Not": 1, Total: 24 },
+    { name: "Probably", Female: 15, Male: 12, Queer: 0, "Prefer Not": 1, Total: 28 },
+    { name: "Not Entered", Female: 25, Male: 21, Queer: 1, "Prefer Not": 1, Total: 48 }
 ]
 export default function BarGraph7() {
   const [width, setWidth] = useState(0);
@@ -85,8 +85,14 @@ export default function BarGraph7() {
             isAnimationActive={false}
           />
           <Bar
-            dataKey="Total"
+            dataKey="Prefer Not"
             fill="#808080"
+            name="Prefer Not"
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="Total"
+            fill="#eeeeee"
             name="Total"
             isAnimationActive={false}
           />

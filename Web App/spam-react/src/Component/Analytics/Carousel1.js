@@ -8,24 +8,24 @@ import "./Carousel.css";
 import { Pie, PieChart, Tooltip} from 'recharts';
 
 const emailSpamReceived = [
-  { name: "Advertisements", value: 45, fill: "#276999"},
-  { name: "Unwanted Spam", value: 45, fill: "#348ccc"}, 
-  { name: "Phishing", value: 42, fill: "#3b9ee6"},
-  { name: "Events", value: 29, fill: "#42afff"},
-  { name: "Spoofing", value: 25, fill: "#a1d7ff"},
-  { name: "Tech Support", value: 15, fill: "#0E798D"},
-  { name: "Malware", value: 14, fill: "#4294D0"},
+  { name: "Advertisements", value: 75, fill: "#276999"},
+  { name: "Unwanted Spam", value: 68, fill: "#348ccc"}, 
+  { name: "Phishing", value: 61, fill: "#3b9ee6"},
+  { name: "Events", value: 45, fill: "#42afff"},
+  { name: "Spoofing", value: 39, fill: "#a1d7ff"},
+  { name: "Tech Support", value: 29, fill: "#0E798D"},
+  { name: "Malware", value: 22, fill: "#4294D0"},
   { name: "None", value: 4, fill: "#808080"}
 ]
 
 const smsSpamReceived = [
-  { name: "Advertisements", value: 36, fill: "#276999"},
-  { name: "Unwanted Spam", value: 40, fill: "#348ccc"}, 
-  { name: "Phishing", value: 35, fill: "#3b9ee6"},
-  { name: "Events", value: 22, fill: "#42afff"},
-  { name: "Spoofing", value: 34, fill: "#a1d7ff"},
-  { name: "Tech Support", value: 9, fill: "#0E798D"},
-  { name: "Malware", value: 10, fill: "#4294D0"},
+  { name: "Advertisements", value: 55, fill: "#276999"},
+  { name: "Unwanted Spam", value: 64, fill: "#348ccc"}, 
+  { name: "Phishing", value: 53, fill: "#3b9ee6"},
+  { name: "Events", value: 38, fill: "#42afff"},
+  { name: "Spoofing", value: 57, fill: "#a1d7ff"},
+  { name: "Tech Support", value: 4, fill: "#0E798D"},
+  { name: "Malware", value: 16, fill: "#4294D0"},
   { name: "None", value: 3, fill: "#808080"}
 ]
 export default class Carousel1 extends Component {

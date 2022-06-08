@@ -4,10 +4,10 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 
 const effectSMSProd = [
-  { name: "Frequently", "Highly Bothering": 2, "Usually Bothering": 2, "Rarely Bothering": 10, "Not Bothering": 5, "Total": 19, amt: 30},
-  { name: "Usually", "Highly Bothering": 0, "Usually Bothering": 6, "Rarely Bothering": 7, "Not Bothering": 3, "Total": 16, amt: 30},
-  { name: "Rarely", "Highly Bothering": 0, "Usually Bothering": 2, "Rarely Bothering": 9, "Not Bothering": 18, "Total": 29, amt: 30},
-  { name: "Not Using", "Highly Bothering": 0, "Usually Bothering": 0, "Rarely Bothering": 1, "Not Bothering": 1, "Total": 2, amt: 30}
+  { name: "Frequently", "Highly Bothering": 3, "Usually Bothering": 2, "Rarely Bothering": 13, "Not Bothering": 6, "Total": 24, amt: 30},
+  { name: "Usually", "Highly Bothering": 0, "Usually Bothering": 10, "Rarely Bothering": 8, "Not Bothering": 8, "Total": 26, amt: 30},
+  { name: "Rarely", "Highly Bothering": 0, "Usually Bothering": 3, "Rarely Bothering": 18, "Not Bothering": 26, "Total": 47, amt: 30},
+  { name: "Not Using", "Highly Bothering": 0, "Usually Bothering": 0, "Rarely Bothering": 1, "Not Bothering": 2, "Total": 3, amt: 30}
 ]
 export default function BarGraph10() {
   const [width, setWidth] = useState(0);

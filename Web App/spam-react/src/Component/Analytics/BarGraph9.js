@@ -4,9 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
 
 const effectEmailProd = [
-    { name: "Frequently", "Highly Bothering": 1, "Usually Bothering": 5, "Rarely Bothering": 14, "Not Bothering": 10, "Total": 33, amt: 30},
-    { name: "Usually", "Highly Bothering": 2, "Usually Bothering": 4, "Rarely Bothering": 12, "Not Bothering": 13, "Total": 31, amt: 30},
-    { name: "Rarely", "Highly Bothering": 0, "Usually Bothering": 1, "Rarely Bothering": 2, "Not Bothering": 2, "Total": 5, amt: 30}
+    { name: "Frequently", "Highly Bothering": 2, "Usually Bothering": 6, "Rarely Bothering": 24, "Not Bothering": 14, "Total": 46, amt: 30},
+    { name: "Usually", "Highly Bothering": 2, "Usually Bothering": 6, "Rarely Bothering": 17, "Not Bothering": 17, "Total": 42, amt: 30},
+    { name: "Rarely", "Highly Bothering": 0, "Usually Bothering": 1, "Rarely Bothering": 7, "Not Bothering": 4, "Total": 12, amt: 30}
 ]
 export default function BarGraph9() {
   const [width, setWidth] = useState(0);

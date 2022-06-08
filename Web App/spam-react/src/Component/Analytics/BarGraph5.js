@@ -5,21 +5,21 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 const data = [
   {
     name: "Scammed",
-    Convenience: 1,
-    Privacy: 17,
-    Total: 18
+    Convenience: 3,
+    Privacy: 23,
+    Total: 26
   },
   {
     name: "Probably",
     Convenience: 2,
-    Privacy: 4,
-    Total: 6
+    Privacy: 5,
+    Total: 7
   },
   {
     name: "Not Hacked",
-    Convenience: 10,
-    Privacy: 32,
-    Total: 42
+    Convenience: 14,
+    Privacy: 53,
+    Total: 67
   },
 ];
 
